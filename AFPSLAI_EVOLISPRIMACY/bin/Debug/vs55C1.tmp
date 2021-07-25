@@ -1,0 +1,676 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using System.Threading;
+
+using ElySCardDotNet;
+using Evolis_Printer.Printer;
+
+namespace ElySCardDotNetSample
+{
+    public partial class Form1 : Form
+    {
+        private ISCardManager m_iResMan = null;
+        private ISCardConnection m_iCard = null;
+
+        private string m_strSelectedReaderSN = null;
+        private string m_strSelectedInterface = null;
+        private string[] m_strListInterfaces = null;
+
+        private byte m_RF_polling = 0x13;
+
+        private SHARE m_connectionMode;
+        private string[] m_strMode;
+        private DISCONNECT m_disconnectionMode;
+        private PROTOCOL m_protocol;
+        private string[] m_strProtocol;
+
+        private ArrayList m_listScript;
+
+        DateTime startTime;
+        DateTime stopTime;
+
+        #region timer functions
+        private void StartTimer()
+        {
+            // Read the initial time
+            startTime = DateTime.Now;
+        }
+
+        private double StopTimer()
+        {
+            stopTime = DateTime.Now;
+            TimeSpan duration = stopTime - startTime;
+            return duration.TotalMilliseconds;
+        }
+        #endregion
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            m_listScript = new ArrayList();
+
+            // Set share connection mode by default 
+            exclusiveToolStripMenuItem.Tag = SHARE.Exclusive;
+            sharedToolStripMenuItem.Tag = SHARE.Shared;
+            sharedToolStripMenuItem.Checked = true;
+            directToolStripMenuItem.Tag = SHARE.Direct;
+            m_connectionMode = SHARE.Shared;
+
+            m_strMode = new string[]{"", "Mode Exclusive","Mode Shared","Mode Direct"};
+            
+            // Set reset disconnection mode by default 
+            leaveToolStripMenuItem.Tag = DISCONNECT.Leave;
+            unpowerToolStripMenuItem.Tag = DISCONNECT.Unpower;
+            resetToolStripMenuItem.Tag = DISCONNECT.Reset;
+            resetToolStripMenuItem.Checked = true;
+            ejectToolStripMenuItem.Tag = DISCONNECT.Eject;
+            m_disconnectionMode = DISCONNECT.Reset;
+
+            // Set protocols
+            txToolStripMenuItem.Tag = PROTOCOL.T0orT1;
+            txToolStripMenuItem.Checked = true;
+            t0ToolStripMenuItem.Tag = PROTOCOL.T0;
+            t1ToolStripMenuItem.Tag = PROTOCOL.T1;
+            undefinedToolStripMenuItem.Tag = PROTOCOL.Undefined;
+            m_protocol = PROTOCOL.T0orT1;
+
+            m_strProtocol = new string[] { "Undefined", "T0", "T1", "T0orT1" };
+            labelMode.Text = m_strMode[(int)SHARE.Shared] + "/" + m_strProtocol[(int)PROTOCOL.T0orT1];
+
+            // Establish context with the PCSC manager
+            try
+            {
+                m_iResMan = new SCardManager();
+                m_iResMan.EstablishContext(SCOPE.System);
+                refreshReaderList();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("The PCSC Resource Manager is not available!\r\n" +
+                    exc.Message, "PC/SC stack failure",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation,
+                    MessageBoxDefaultButton.Button1);
+            }
+        }
+
+        ~Form1()
+        {
+            m_iResMan.ReleaseContext();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            System.Reflection.AssemblyName aName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+            this.Text += " v" + aName.Version.Major + "." + aName.Version.Minor + "." + aName.Version.Revision;
+        }
+
+        public void addLogMsg(string msg)
+        {
+            this.textBoxLog.Text += msg;
+            this.textBoxLog.SelectionStart = textBoxLog.Text.Length;
+            this.textBoxLog.ScrollToCaret();
+        }
+
+        #region GUID functions
+
+        // The GUID functions are proprietary functions which bypass certain limitations
+        // or gaps in the PCSC specification.
+
+        private void displayReaderInfo()
+        {
+            try
+            {
+                // Open Guid communication
+                ElyRDRControl.RDR_OpenComm(m_strSelectedReaderSN);
+
+                byte byMajor = 0;
+                byte byMinor = 0;
+                ElyRDRControl.RDR_GetFirmwareVersion(ref byMajor, ref byMinor);
+
+                // Get Firmware version and Serial Number
+                string szFirmware = String.Format("Firmware v{0:d2}.{1:d2}\r\n", byMajor, byMinor);
+                addLogMsg(szFirmware);
+
+                string szSerialNumber = ElyRDRControl.RDR_GetSerialNumber();
+                szSerialNumber = String.Format("Serial Number {0}\r\n", szSerialNumber.Substring(16));
+                addLogMsg(szSerialNumber);
+            }
+            catch (ElyRDRException rdrExc)
+            {
+                addLogMsg("Reader direct command failed. Win32 Error code is " + rdrExc.ErrCode.ToString() + "\r\n");
+            }
+            finally
+            {
+                // Close Guid communication
+                ElyRDRControl.RDR_CloseComm();
+            }
+        }
+
+        private void switchRFPollingMode(bool bActive)
+        {            
+            byte[] abyTmpRFParam;
+            byte RF_polling = 0;
+
+            try
+            {
+                // Open Guid communication
+                ElyRDRControl.RDR_OpenComm(m_strSelectedReaderSN);
+
+                // Stop internal polling
+                ElyRDRControl.RDR_StopPolling();
+
+                if (bActive)
+                {
+                    // Turning ON RF field is handled by the reader polling
+                    //ElyRDRControl.RDR_SetRF(bActive);
+                    
+                    abyTmpRFParam = ElyRDRControl.RDR_GetDynamicRFParams();
+                    // Set polling for all kind of card
+                    abyTmpRFParam[0x3C] = 0x13;
+                }
+                else
+                {                    
+                    ElyRDRControl.RDR_SetRF(false);
+
+                    abyTmpRFParam = ElyRDRControl.RDR_GetDynamicRFParams();
+                    abyTmpRFParam[0x3C] = 0;
+                }
+
+                ElyRDRControl.RDR_SetDynamicRFParams(abyTmpRFParam);
+
+                // Start internal polling
+                ElyRDRControl.RDR_StartPolling();
+
+                if (bActive)
+                    addLogMsg("Start RF polling mode.\r\n");
+                else
+                    addLogMsg("Stop RF polling mode.\r\n");
+
+            }
+            catch (ElyRDRException rdrExc)
+            {
+                addLogMsg("Reader direct command failed. Win32 Error code is " + rdrExc.ErrCode.ToString() + "\r\n");
+            }
+            finally
+            {
+                // Close Guid communication
+                ElyRDRControl.RDR_CloseComm();
+            }
+        }
+        #endregion
+
+        private void refreshReaderList()
+        {
+            // Update the select menu with available reader SN 
+            try
+            {
+                string[] SNs = ElyRDRControl.RDR_ListReaders();
+                setGUIDInterfaceToolStripMenuItem.DropDownItems.Clear();
+                setGUIDInterfaceToolStripMenuItem.Enabled = (SNs.Length > 0);
+                stopPollingToolStripMenuItem.Enabled = false;
+                startPollingToolStripMenuItem.Enabled = false;
+                getReaderInfoToolStripMenuItem.Enabled = false;
+
+                foreach (string SN in SNs)
+                {
+                    ToolStripMenuItem menu_item = new ToolStripMenuItem(SN);
+                    menu_item.CheckOnClick = true;
+                    menu_item.Click += new System.EventHandler(this.SNSelectToolStripMenuItem_Click);
+
+                    setGUIDInterfaceToolStripMenuItem.DropDownItems.Add(menu_item);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error ElyRDRControl DLL is missing",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation,
+                        MessageBoxDefaultButton.Button1);
+            }
+
+            // Get the list of PC/SC interfaces
+            string sStatus = "No reader detected!";
+            try
+            {
+                // Clear reader list and stop tracking 
+                treeViewRdrs.Update();
+                treeViewRdrs.Nodes.Clear();
+                timer1.Stop();
+
+                m_strListInterfaces = m_iResMan.ListReaders();
+                if (m_strListInterfaces != null && m_strListInterfaces.Length > 0)
+                {
+                    sStatus = "Select the card interface in the list to execute a script";
+                    foreach (string pcsc_interface in m_strListInterfaces)
+                    {
+                        treeViewRdrs.Nodes.Add(pcsc_interface, pcsc_interface);
+                    }
+
+                    // Start tracking, 10 readers is the limit of winscard polling
+                    int nb_reader = m_strListInterfaces.Length;
+                    if(nb_reader>10)
+                        nb_reader = 10;
+                    readersState = new SCARD_READERSTATE[nb_reader];
+                    for (int i = 0; i < nb_reader; i++)
+                    {
+                        readersState[i] = new SCARD_READERSTATE();
+                        readersState[i].szReader = m_strListInterfaces[i];
+                        readersState[i].pvUserData = IntPtr.Zero;
+                        readersState[i].dwCurrentState = 0;
+                        readersState[i].dwEventState = 0;
+                        readersState[i].cbAtr = 0;
+                        readersState[i].rgbAtr = new byte[36];
+                    }
+                    timer1.Start();
+                }
+                else
+                {
+                    MessageBox.Show("No reader detected!");
+                    buttonConnect.Enabled = false;
+                }
+                treeViewRdrs.EndUpdate();              
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Unexpected error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation,
+                        MessageBoxDefaultButton.Button1);
+            }
+
+            label1.Text = sStatus;
+        }
+
+
+        private void getATRListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            STATE State;
+            PROTOCOL Protocol;
+            byte[] pbATR;
+            string[] readers;
+
+            foreach (string reader in m_strListInterfaces)
+            {
+                try
+                {
+                    m_iCard = m_iResMan.CreateConnection(reader);
+                    m_iCard.Connect(SHARE.Exclusive, PROTOCOL.T0orT1);
+                    pbATR = m_iCard.GetStatus(out readers, out State, out Protocol);
+                    m_iCard.Disconnect(DISCONNECT.Unpower);
+
+                    addLogMsg(reader + ": " + APDUScript.toHexaString(pbATR) + "\r\n");
+                }
+                catch (Exception exc)
+                {
+                    addLogMsg(reader + ": " + exc.Message + "\r\n");
+                }
+
+                addLogMsg("\r\n");
+            }
+        }
+
+        private void refreshReaderListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonExecute.Enabled = false;
+            labelReader.Text = "No PC/SC interface selected";
+
+            refreshReaderList();
+        } 
+
+        private void displayReaderInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayReaderInfo();
+        }
+
+
+        private void treeViewRdrs_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode n = e.Node;
+            if (n.Parent != null)
+            {
+                treeViewRdrs.SelectedNode = n.Parent;
+            }
+            else
+            {
+                m_strSelectedInterface = n.Text;
+            }
+
+            labelReader.Text = m_strSelectedInterface;
+
+            buttonConnect.Enabled = true;
+            buttonExecute.Enabled = true;
+        }
+        
+
+        private void SNSelectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem itemSelected = sender as ToolStripMenuItem;
+
+            if (itemSelected.Checked)
+            {
+                m_strSelectedReaderSN = itemSelected.Text;
+            }
+            else
+            {
+                m_strSelectedReaderSN = null;
+            }
+
+            stopPollingToolStripMenuItem.Enabled = itemSelected.Checked;
+            startPollingToolStripMenuItem.Enabled = itemSelected.Checked;
+            getReaderInfoToolStripMenuItem.Enabled = itemSelected.Checked;
+
+            foreach (ToolStripMenuItem item in setGUIDInterfaceToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked && item != itemSelected)
+                    item.Checked = false;
+            }
+        }
+
+        private void stopPollingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            switchRFPollingMode(false);            
+        }
+
+        private void startPollingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            switchRFPollingMode(true);
+        }
+
+        private void updateRdrsTree(TreeNode rdrNode, string status, int imageIndex)
+        {
+            treeViewRdrs.BeginUpdate();
+            rdrNode.Nodes.Clear();
+            if (status != "")
+            {
+                TreeNode cardNode = rdrNode.Nodes.Add(status);
+                cardNode.ImageIndex = imageIndex;
+                cardNode.SelectedImageIndex = imageIndex;
+
+                rdrNode.Expand();
+            }
+            treeViewRdrs.EndUpdate();
+        }
+
+        SCARD_READERSTATE[] readersState;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                // Refresh SCARD_READERSTATE array
+                if (m_iResMan.GetStatusChange(0, readersState) == SCardException.SCARD_E_TIMEOUT)
+                    return;
+
+                // Browse the reader state structure and look for changes 
+                for( int i = 0; i < readersState.Length; i++ )
+                {
+                    // No change since last notification
+                    if (readersState[i].dwCurrentState == readersState[i].dwEventState)
+                        continue;
+
+                    if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_IGNORE) > 0)
+                    {
+                        // The reader is ignored
+                        addLogMsg(readersState[i].szReader + " status:\r\n");
+                        addLogMsg(" * This reader is ignored.\r\n");
+
+                        if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_UNKNOWN) > 0)
+                            addLogMsg(" * The given reader name  is not recognized by the resource manager.\r\n");                        
+                    }
+                    else if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_CHANGED) > 0)
+                    {
+                        // The reader state has changed, new state info is displayed
+ 
+                        TreeNode rdrNode = treeViewRdrs.Nodes[readersState[i].szReader];                        
+                        //addLogMsg(readersState[i].szReader + " status:\r\n");
+                        //addLogMsg(" * Reader state changed.\r\n");
+
+                        if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_UNAVAILABLE) > 0)
+                        {
+                            addLogMsg(readersState[i].szReader + " The actual state of this reader is not available.\r\n");
+                        }
+                        else if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_EMPTY) > 0)
+                        {
+                            updateRdrsTree(rdrNode, "", 0);
+                            //addLogMsg("\tThere is no card in the reader.\r\n");
+                        }
+                        else if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_PRESENT) > 0)
+                        {
+                            byte[] baATR;
+
+                            //addLogMsg("\tThere is a card in the reader.\r\n");
+                            if (readersState[i].cbAtr > 0)
+                            {
+                                baATR = new byte[readersState[i].cbAtr];
+                                Array.Copy(readersState[i].rgbAtr, baATR, readersState[i].cbAtr);
+                                updateRdrsTree(rdrNode, APDUScript.toHexaString(baATR), 1);
+                                //addLogMsg("\tATR: " + APDUScript.toHexaString(baATR) + "\r\n");
+                            }
+                            if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_ATRMATCH) > 0)
+                            {
+                                addLogMsg(readersState[i].szReader + "The card ATR matches with one of the target cards.\r\n");
+                            }
+                            if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_EXCLUSIVE) > 0)
+                            {
+                                addLogMsg(readersState[i].szReader + "The card is allocated for exclusive use by another application.\r\n");
+                            }
+                            if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_INUSE) > 0)
+                            {
+                                addLogMsg(readersState[i].szReader + " The card is in use by one or more other applications.\r\n");
+                            }
+                            if ((readersState[i].dwEventState & (uint)SCARD_STATE.SCARD_STATE_MUTE) > 0)
+                            {
+                                updateRdrsTree(rdrNode, "UNRESPONSIVE CARD", 1);
+                                //addLogMsg(readersState[i].szReader + " There is an unresponsive card in the reader.\r\n");
+                            }
+                        }
+                    }
+
+                    // Replace the reader state with the new one 
+                    readersState[i].dwCurrentState = readersState[i].dwEventState ^ (int)SCARD_STATE.SCARD_STATE_CHANGED;
+                }
+            }
+            catch (Exception exc)
+            {
+                addLogMsg(exc.Message + "\r\n");
+            }
+        }
+
+        private void buttonTrack_Click(object sender, EventArgs e)
+        {
+            if (!timer1.Enabled)
+            {
+                // Initialize and set the size of the SCARD_READERSTATE array
+                readersState = new SCARD_READERSTATE[m_strListInterfaces.Length];
+                for (int i = 0; i < m_strListInterfaces.Length; i++)
+                {
+                    readersState[i] = new SCARD_READERSTATE();
+                    readersState[i].dwCurrentState = 0;
+                    readersState[i].pvUserData = IntPtr.Zero;
+                    readersState[i].szReader = m_strListInterfaces[i];
+                }
+                timer1.Start();
+                trackStatusChangeToolStripMenuItem.Text = "Stop Status Change Tracker";
+            }
+            else
+            {
+                timer1.Stop();
+                trackStatusChangeToolStripMenuItem.Text = "Track Status Change";
+            }
+        }
+
+        private void connectionModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem itemSelected = sender as ToolStripMenuItem;
+
+            // Mode can only be changed, deselect is not allowed
+            if (!itemSelected.Checked)
+            {
+                itemSelected.Checked = true;
+                return;
+            }
+            else
+            {
+                m_connectionMode = (SHARE) itemSelected.Tag;
+                labelMode.Text = m_strMode[(int)m_connectionMode] + "/" + m_strProtocol[(int)m_protocol];
+            }
+
+            foreach (ToolStripMenuItem item in connectionModeToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked && item != itemSelected)
+                    item.Checked = false;
+            }
+        }
+
+        private void disconnectionModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem itemSelected = sender as ToolStripMenuItem;
+
+            // Mode can only be changed, deselect is not allowed
+            if (!itemSelected.Checked)
+            {
+                itemSelected.Checked = true;
+                return;
+            }
+            else
+            {
+                m_disconnectionMode = (DISCONNECT) itemSelected.Tag;
+            }
+
+            foreach (ToolStripMenuItem item in disconnectionModeToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked && item != itemSelected)
+                    item.Checked = false;
+            }
+        }
+
+        private void protocolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem itemSelected = sender as ToolStripMenuItem;
+
+            if (!itemSelected.Checked)
+            {
+                itemSelected.Checked = true;
+                return;
+            }
+            else
+            {
+                m_protocol = (PROTOCOL)itemSelected.Tag;
+                labelMode.Text = m_strMode[(int)m_connectionMode] + "/" + m_strProtocol[(int)m_protocol];
+            }
+
+            foreach (ToolStripMenuItem item in protocolToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked && item != itemSelected)
+                    item.Checked = false;
+            }
+        }
+
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+            STATE State;
+            PROTOCOL Protocol;
+            byte[] pbATR;
+            string[] readers;
+            try
+            {
+                if (m_iCard == null || !m_iCard.Connected)
+                {                    
+                    // Create the connection with the card using the selected interface
+                    m_iCard = m_iResMan.CreateConnection(m_strSelectedInterface);
+                    
+                    // Connect to the card and retrieve the ATR
+                    m_iCard.Connect(m_connectionMode, m_protocol);
+                    pbATR = m_iCard.GetStatus(out readers, out State, out Protocol);
+
+                    addLogMsg(m_strSelectedInterface + ": " + APDUScript.toHexaString(pbATR) + "\r\n");
+                    buttonConnect.Text = "Disconnect";
+                    buttonExecute.Enabled = true;
+                }
+                else
+                {
+                    // Disconnect to the card
+                    m_iCard.Disconnect(m_disconnectionMode);
+                    addLogMsg(m_strSelectedInterface + " card disconnected.\r\n");
+                    
+                    buttonConnect.Text = "Connect";
+                    buttonExecute.Enabled = false;
+                }
+            }
+            catch (Exception exc)
+            {
+                addLogMsg(m_strSelectedInterface + ": " + exc.Message + "\r\n");
+            }
+
+            addLogMsg("\r\n");
+        }
+
+        private void menuItemOpenFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                APDUScript apduScript = new APDUScript(openFileDialog1.FileName);
+
+                comboBoxScript.Items.Add(apduScript);
+                comboBoxScript.SelectedItem = apduScript;
+            }
+        }
+
+        private void buttonExecute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!m_iCard.Connected)
+                {
+                    MessageBox.Show("You first need to create a connection with the card.", "No connection available");
+                }
+                else
+                {
+                    APDUScript script = (APDUScript)comboBoxScript.SelectedItem;
+
+                    if (script == null)
+                    {
+                        MessageBox.Show("You need to select a script file to execute.", "No script file selected");
+                        return;
+                    }
+
+                    StartTimer();
+
+                    byte[] baCmdBuffer;
+                    byte[] baRespBuffer;
+                    long count = 0;
+                    foreach (APDUInstruction ai in script.listAPDU)
+                    {
+                        baCmdBuffer = APDUScript.toBytes(ai.Command);
+                        count += baCmdBuffer.Length;
+
+                        baRespBuffer = m_iCard.Transmit(baCmdBuffer, (uint)baCmdBuffer.Length);
+                        count += baRespBuffer.Length;
+
+                        // Add trace if required
+                        if (checkBoxTrace.Checked)
+                        {
+                            StringBuilder sb = new StringBuilder(ai.Comment);
+                            sb.Append("\r\n");
+
+                            sb.Append("Send=>");
+                            sb.Append(ai.Command);
+                            sb.Append("\r\n");
+
+                            sb.Append("Get<=");
+                            String resp = APDUScript.toHexaString(baRespBuffer);
+                            sb.Append(resp);
+                            sb.Append("\r\n");
+
+                            // Check

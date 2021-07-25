@@ -1,0 +1,3045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>236, 17</value>
+  </metadata>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>366, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhGAAYAIfEAF3C/1i8/1u//1a5/2DF/1O1/1Gy/mLI/2TL/1/U/3Df/0up92nV/06u/D2u/2bN
+        /1G6/2fO/02s+U6t+2PJ//H4+0aj8uPj42rW/0im9Uyr+kuq+GXM/0yq+WXN/4i01v39/XDg/z+y/1Cw
+        +2HG//v+/1O0//T09Nra2kCu/2nT/6W3xUO2//Dw8Ly8vGjR/1rD/2LL//z8/Orq6kuw9l+582XW/069
+        /0O1/1Ks79zc3NXy/1zN/+Tk5Dai/WPK/2bP/6fn/9/f3zOi/2PK/s3Q0lCx/OT3/ziU5XPP/Umo9Tur
+        /27e/5vD3Vea02fY/0iy/Xaz31XA/7Xk/lXD/8rKyvP6/VKu9fP7/2rU/1aw8EOm71Kz/kSv+1vA/0Kk
+        7qC3yTin/7nQ3vP4+5a1zVzD/2XO/3O59168+1W3/2za/0is8/f9/0ex/1zO/2TW/3PV/7/DxnjH90mo
+        +H6z2jal/ziU5Nvb20uv/1TB/1Os7mnQ/kmn92fX/76+vvD3/fHx8Viy8mfQ/7K8w2iu5k65/2K571e7
+        /060+vn5+U2u+U+3/06u+VOZ1k/C/1K0/3q/6VCz/Fa4/3au3UOr/z2e8Im01WvX/0ak9nq23jCN4u76
+        /2G7+IW110Cu/WfP/2nS/+Li4lvL/4vg/1Gx/V/P/0yv/1y19Umt/4Xf/0es/kGm9UKs+1W//+zs7KW3
+        x0io82i06KHC4Iez1rPY+VKm7+fn567p/02t+pbW/WvY/1O2/1XI/0in9kap8Vq+/0Sg8NPT02zb/1K4
+        /////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAADEACwAAAAAGAAYAAAI/wCJCWRza1SfBAgTKnyTKsgmgRCP
+        wOFhg4mCixgxhgjxxM2eHRBLJBGl5hIGBihTpsSAQZewUkSwCJzSSsWLTxEiPNjJ80HOCIJAZZGSS6Ac
+        GGY8cEDAtKlTphw8AImBRiCnMhQoHNjKtSvXrD8oICpB7JQXEgTSql3LFi0BGlaIBQoAoK7du3jvrqlA
+        TMsAAYADCx4c+Jcvvnp2BVjMuLFjxoe28M0RaYDly5gzW5aU5gvfK4pMFBhNurRpE4+4rBpDrAasEaQM
+        yJ5Nm7aREYygyCAGiZIECbgmCG9AvHgD4b8lqDIkUAwLCBoWSJ/eQYOGDhumbxiGo4lAQJlEOISiAqH8
+        ojkZMvDplcEUhDy8RMSyBfFOpy4O8ue/gceCfwuV5OdJFEVAJFAofqxgyQcf0MHKEoVgAowdTswChgso
+        gGAgRCf0cMEFQgxCSBgpoIJEIxe0sOGKBiYSDBlK1NGGJn+waCNErsQxiQ9D0HLjjyDo8EotZ/xo5AlV
+        yGLkkjOsGBAAOw==
+</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADI
+        CAAAAk1TRnQBSQFMAgEBAgEAAcwBAAHMAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wEAIP8gAAT/AQcB8Br/
+        IAAD/wG8AewB6wFtAZIBBwHyCP8B9AEcAVIBUQJSBHQBmQP/IAAD/wHsAesB7AHrARIB6gFtAe0BBwHy
+        BP8BvAFSAjEBKgUxASoBMQFSAQcB/yAAAv8B9AHsAesE7AHrAuoBbQHsAQcC9AFRBSoBKQEqASkBKgEp
+        AioBSwHwIAAC/wH3AewB6wHsAesB7ANuAusBbQHrAfABBwUxASoCMQEqBTEBeSAAAf8BvALsAesC7ALr
+        AW0CbgHrAuwB8QGZBTEBKgMxASoEMQFSIAAB8APsAesG7AHrA+wB8AF0BSoEMQUqAVEgAAEHA+wB9wHt
+        AewC6wbsAfABdAQxASoEMQEqBDEBUiAAAbwC7AHtBAcB7wHtAewC6wLsAbwBdAUqBDEBKgQxAVIgAAHy
+        AewB7QHvCAcB7wHtAfcB9AF0BDEBKgQxASoBMQErAioBdCAAAfQB7AHvAgcB7wL3Ae8EBwHyAv8BmQUx
+        ASoCMQEqBTEBmSAAAf8B9wHvAgcC7wL3Ae8CBwH0A/8B9AFLBSoCMQEpBSoB8CAAAv8B8wHxAbwFBwG8
+        Bf8B9AG8AVIHMQEqAzEBmQH/IAAH/wHzAvEI/wHzARwCUQRSAUsBUgF0AbwC/yAAIP8gAAFCAU0BPgcA
+        AT4DAAEoAwABQAMAARADAAEBAQABAQUAAYAXAAP/gQAL
+</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1ufAAAAAAAADYAAAAoAAAAyAAAADUAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////+fn5n56e6urq
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////5OPjiIeH
+        3t7e////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////19bW
+        fXt7ysnJ/Pz8////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////f39/Pz8/Pz8+vr6+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+        +/v7/Pz8/Pz8////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        4uLigH5+paOj8PDw////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////+/v79/f38/Pz8PDw6+vr2dnZzczMw8HB
+        srCwqKamnZublpSUjIqKjIqKhIKCe3p6fHp6e3p6e3p6fHp6fHp6fHp6fHp6fHp6fHp6fHp6fHp6fXt7
+        iYiIjIqKjIuLmpmZnZubqKensbCwwL+/x8XF2dnZ5OTk7u7u8vLy9vX1+fn5/v7+////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////7u3tmJeXfHp6yMfH9/f3////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////v7++fn58/Pz7e3t5OTk0tLSvr6+rKurmZiYioiIfnx8cG5uZmNjWlhYWldXWldXWlhY
+        W1hYWlhYWldXWlhYWlhYWlhYWldXWldXWlhYWlhYWldXWldXWldXWldXWldXWldXWldXWldXWlhYWlhY
+        WlhYWlhYWldXWldXWldXWldXWldXWlhYWlhYWldXWlhYXlxcbGpqeXd3hYSElJKSpaSkubm5zs7O5eXl
+        7+7u9fX1/Pz8////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////+/v7wcDAdHJyhoSEzczM9/f3////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////+fn58PDw6ejo
+        29raw8PDraysmJaWhoSEd3V1Z2VlW1hYWldXWldXWldXWlhYWldXWlhYWldXWldXW1hYWldXWldXWldX
+        WlhYWlhYW1hYWldXWldXWlhYWlhYWlhYWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WlhYWlhYWldXWldXWlhYWldXWldXWlhYWldXWldXWlhYWlhYWlhYWlhYWldXWlhYWlhYWldXWldXWldX
+        amdne3p6i4mJoqGhwcDA29ra6+vr9vb2/v7+////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////6+rqoqCgaGZmhIKCwcHB7e3t////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////f398/Pz6urq3dzcx8bGsK+vlZOThIKCc3FxZGFh
+        WldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWlhYWlhYWldXWldX
+        WldXWldXWlhYWldXWldXWlhYWlhYWlhYWlhYWldXWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        W1hYWldXWlhYWldXWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldXW1hYWldXWldXWldXWlhYWlhY
+        WldXWlhYWlhYWlhYWldXW1hYaWdnfnx8l5WVtrW119fX6+vr+fn5////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////v7+29vblJOTZGFhcW5uoJ6e1tXV8vLy////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////+Pj47u3t4eHh0M/PuLe3n56eiIaGeXZ2a2hoXFlZWldXWlhYWldXWlhYWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWlhYWlhYWldXWlhYWlhY
+        WlhYWldXWldXWldXWlhYWlhYWldXWlhYWldXWldXW1hYWlhYWldXWlhYWlhYWlhYW1hYYV9fZGFhZ2Rk
+        bWpqbWtrb21tdXNzdnR0dnNzdnNzdnNzdnNzdnNzdnNzdnNzdnNzdXNzbmxsbWpqbGlpZWJiZGFhXFlZ
+        WldXWldXWlhYWlhYWlhYWldXWldXWldXWlhYWlhYXFpabWtrgoGBpKOjzczM5+fn+fn5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////f3929vblZOTZ2RkXVtbd3V1nJqay8rK5ubm+fn5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////f398vLy5eXl
+        2djYwsLCqaiokZCQf3x8cW5uYmBgWldXWldXWlhYWlhYWlhYWlhYWlhYWldXWldXWldXWldXWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WlhYWldXWldXWldXWldXYV9faWdncnBweXd3g4GBj46Om5mZrKurt7a2wL+/zc3N1NPT3Nvb3t7e4+Li
+        6unp6enp7Ozs9PT09PT09PT09fT09fT09fT09fT09fT09fT09fT09PPz6+vr6enp6Ojo4N/f3t7e1dTU
+        0dDQwcDAtLS0p6aml5aWg4GBenh4cG5uZmRkXFlZWlhYWlhYWlhYWlhYW1hYamdngX9/qqio0tHR7e3t
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////f395OTkqKendXJyXFlZW1hYaWdnf319oqCgwsHB3d3d
+        7e3t/f39////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////v7+9PT05ubm2tnZycnJs7GxmpiYgX9/dXNzaWZm
+        XVpaWldXWlhYWldXWldXWldXWlhYWlhYWldXWlhYWlhYW1hYWlhYWlhYWldXWlhYW1hYWlhYWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWlhYW1hYZmNjcW9vfXt7
+        ioiInZycsK+vw8LC1dTU397e5ubm7u7u9fX1/v7+////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////9vb27e3t4+Pj19bWwsHBqaiojo2NfHp6bWpqXVpaWldXWldXXVpacG5u
+        k5GRxMLC6Ojo/v7+////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////8PDwzczMk5GRcG1tW1lZWlhYW1hYY2Fh
+        cG5uf3x8l5WVr66uxsbG1tXV4eHh7ezs8/Pz////////////////////////////////////////////
+        ////+Pj48/Pz6Ojo4ODg2NfXzMvLuLe3p6WllJKSgH19dHJyamhoYF5eWldXWldXWldXWldXWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWlhYWlhYW1hYW1hYWldXWlhYWldXWldXWldXWlhYWldXWldXWldX
+        WldXWldXWldXWldXWlhYWldXWldXWlhYWlhYWldXZ2VldXNzg4GBlZSUraysxMPD2NfX5eTk7u7u9/f3
+        /v7+////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////v7+9vb26+rq29rawMDAnZycgoCAbGlp
+        WldXWlhYbGpqjIqKwcDA6+vr////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////f397u3t0NDQo6KigX9/Z2Vl
+        WlhYWlhYWldXWlhYWlhYX11dZ2RkbWtrcW9veXd3enh4jYuLjYuLjYuLjYuLjYuLjYuLjYuLjYuLgX9/
+        eXd3dHJycW9va2lpZmNjYV5eWldXWlhYWldXW1hYWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWlhYW1hYWlhYWlhYW1hYWldXWldXWldXW1hYWlhYWlhYWldXWlhY
+        WldXWldXWlhYXlxcb2xsgX5+kY+PqKiowcHB29vb6Ojo8fHx+vr6////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////+fj46+vr
+        1tXVsK6uiYeHbGlpW1hYbWpqlJKSzc3N9vb2////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////v7+////////9/f36+vr
+        0NDQraysjYuLdHJyX11dWldXWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WlhYWlhYWlhYW1hYWlhYWlhYWldXWldXWlhYWlhYWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWldXWlhYWlhYWldXWlhYWldXWldXWlhYWlhYWldXaWdne3h4i4mJ
+        n52duLa20c/P5uXl7+/v9/f3/f39////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////+/v77e3t0tHRpaOjfnx8Yl9fd3V1sK6u5+fn/v7+////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////Pz88/Pz6enp0tDQuLa2nJubiIaGdnNzZWNjWlhYWldXWldXWldXWldXWldXWlhYWlhYWlhY
+        WldXWldXWldXWlhYWldXW1hYWldXWlhYWldXWlhYWlhYWldXWldXWldXWldXWldXWldXWldXWldXWldX
+        WldXWldXWldXWldXWldXWldXWldXWldXZGJicW5uf3x8jIqKmpiYrKurwb+/1NTU6Ojo7+7u9fX1+/v7
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////v7+9/b24+PjtLOzg4GBbWtrmZiY29vb/f39////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////+vr69fX18fHx5+fn1tXVxcPDtLOzpKOjmpmZjoyMh4WFfXt7
+        eHZ2bGpqbGlpbGlpWldXWldXWldXWldXWldXWldXWldXWldXX1xcbGpqbGlpbGpqd3R0fXt7gX5+jYuL
+        j46OnpycpKOjs7KywcDAzcvL3dzc7Ovr8fHx9PT0+Pj4+/v7////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////+fn55eXlr6+vgoCAjIqK1tXV/f39////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////v7+/////////////////////v7+/Pz8+/v7+fn5
+        +Pj49vb29vb29vb28/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz9PPz9vb29vb29vb2+Pj4+fn5+fn5/Pz8
+        /Pz8////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////+fn529nZoaCglZOT19fX/v7+////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////v7+8PDwuLi4rq6u////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////f39////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////7///7+
+        /////P3/4+/9q8/7f7b5cbD5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5
+        c6/5c6/5c6/5c6/5c6/5xN39/f////7+/v/////////////////////+/v7/7vX+udb8hbr6crD4ca/4
+        crD5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5frX66PL+/////v/+
+        /////////////////v///P7/lML7c7D5crD4ca/5sNL8///+////////////////////////////////
+        /////////////////////////////////v///v/////+/v7/7vX+y+H8nMb7eLP5crD5ca/5cbD5c6/5
+        c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c7D4kMD6+fz+/v7+////////////////////////
+        ////////////////////////9fn/m8X7kMD7kMD7kL/6x+D8/v/////+////////////////////////
+        /////////////////////////v///v//hLn6ca/5crD4crD5utj8////////////////////9Pj/g7r5
+        cbD5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c6/5c7D5frb5psz83u39
+        /P3//v///////////////////////////////////////////////////////////////////f///v/+
+        8fb+kMD6NIz2H4L1IIL1IYH2H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1
+        H4H1H4H1H4H1H4H1H4H1osn8/v///v/+/v/+/////////////////f7+wNv8Tpn3IIL1H4L1IYL1IIL1
+        H4L1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1L4r22+r9/v///v/+
+        ////////////////////+/z/VJ74H4L2IYL2IoL1grj7/v/+////////////////////////////////
+        /////////////////////////////v///v7+/v//8/j/oMj7SZj3I4P1IYL1IoL1IIL2IIL2IIL1H4H1
+        H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1IIH2UZz39vr//v//////////////////////////
+        ////////////////////////7PT/NY72IYL1IIL2IIL0kMH6/v/+/v//////////////////////////
+        /////////////////////////v///v/+QJL3H4L2IIL2H4L0k8H7/////////////////v/+7vX+PZH3
+        IIL1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1IIL1IIL2IYL2Lor1
+        gbf78Pb+/v/+/v/+/v/////////////////////////////////////////////////////////97vX+
+        Yqb5IIL1IIL1IYH2IIH2IYL1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1
+        H4L1H4L1H4L1H4L1H4L1osr8/f///v7//v7+////////////////xN38Lon2IoL1H4L1IIL1H4L1IYL0
+        IIH1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1MIr22+r9/v////7+
+        /////////////////v//+/z+VJ75IoL2IYL1H4L1gbf5/v/+////////////////////////////////
+        /////////////////////////////////v/+4u7+YaX5I4P1H4L1IoL2IYL1IoL1IIL1IYL1IIL1H4L1
+        H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1IIH1Tpz39/r/////////////////////////////
+        ////////////////////////7PT+No72HoL1IYL1IIL0j8H6/////v//////////////////////////
+        /////////////////////////v///v7+P5H3IIL1IIL1IIL1lML7/////////////////v/+7fX+PJH3
+        IIL1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1H4L1IIL1IYL1H4L1H4L1
+        H4L1Y6b49Pn+///+////////////////////////////////////////////////////////+/3/drH5
+        IIL1IYL1IIL1IYL1IIL2IIH1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1
+        H4H1H4H1H4H1H4H1H4H1ocn7/v///v/+////////////////8vj/RJb3IIL1IIL1IYL2IIL1IIL1IIL1
+        H4L1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1MIr22+r9/v/+///+
+        ////////////////////+vz+VZ74H4L1H4L1IYL1grj6////////////////////////////////////
+        ////////////////////////////////5fD+WJ/4IYL1IIL1H4L1IIL1IYL1IIL1IIH1IIL1IIH1H4H1
+        H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1IIH1T5v49vr+/v//////////////////////////
+        ////////////////////////7PT/No72IYH2H4L1H4H1kMH6/v///v//////////////////////////
+        /////////////////////////v///v/+PpH3IIL1IYH1IIL1k8L7////////////////////7vX+PJL3
+        H4L1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1H4H1IIH1HoL1IoL1IIL1
+        IIL1IYL1kcH6/v//////////////////////////////////////////////////////////xt79JIT1
+        IoP1IIL1IYL2IYP1Oo/3S5r3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3
+        TZr3TZr3TZr3TZr3TZr3tNT7/v/+/v7//v///////v///v/+sNP7IYL1IIL2IIL1IIL2L4r1S5n4TJr3
+        TJr4TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3WqH44e79/////v//
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////////////v//9/r/c6/6IYL1IIL1IIL1IIL1IIL2LIj2RZb4Tpr3Spv3TZr3TZr3
+        TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3cq/69/v/////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v//8ff+Y6f5
+        TJr4TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TZr3TJr3O5H3IoL1H4L1
+        IoL1H4P0OI/3+fv+////////////////////////////////////////////////////////cK35IYL1
+        IIL2IIL1JYT1fLX64O3+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+
+        8/j+8/j+8/j+8/j+8/j++fz+/v/+/v///////////v///v/+erT4H4H1IYL1IIL1L4r2wNv88ff+8vj+
+        8/j/8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+9Pn//P3+/v///v//
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////v///v///v//wtz8J4X2IIL2IYL1H4L1KYb2ebP60eX97PT+8/j+8/j/8vj/8/j+
+        8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j/9fn+/f7//f//////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////////f7+9Pn/
+        8/f+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j+8/j/5PD+frX5Mov3
+        MIv1MYv2OI731uf+////////////////////////////////////////////////////////OY/2IYL1
+        IYL2IIH1W6H49vr+/v/+////////////////////////////////////////////////////////////
+        /////////////////////v/+/v/+/v///v///v///////v7/cK75IIL1IYL1H4H1Up33/f7+/////v//
+        /v///////////////////////////////////////////////////////////////////v///v/+/v//
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////v///v//+/3+bq35IYL1IYL0H4H2JIT1ncb7+fz///7//v/////////+////////
+        /////////////////////////////////////////////////v/+/v/////+////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v///v/+///+
+        /v///////////////////////////////////////////////////////////////////v7+8/j+3uz9
+        3ez93uz+3+3+9fn/////////////////////////////////////////////////////////IYL2IYL2
+        IIL1H4L1nMj6/////v//////////////////////////////////////////////////////////////
+        /////////////////////////v///////////////////v7/b674H4L1IYH1IYL1Y6b4/v/////+////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////v/+////6vP+QJP4IYL2H4L1IIL1XqT49Pn+/////v///v//////////////////
+        /////////////////////////////////////////////////////v//////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////////v//////
+        /v/////////////////////////////////////////////////+/////////////v///////v///v//
+        //7//v/+/v//////////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////v///v//2er8I4P2IIL2IIL2IIL2rND7///+/v//////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7////////////////////////////
+        /////////////////////////////////////////////v///v////7+/v///////v/+/v///v///v//
+        /v/////+/v///v7/////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        ///////////////////+/v//w9z9IIL2IIL2IIL2IIL2z+T9/////v////7+////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7////////////////////////////
+        //////////////////////////////////////7//////////////v7+/v/+/v//////2en+aav5O5H2
+        OpH2PJH2QJX12un+/v//////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////+/3+VJ74IIL1IYH1IYL2grj7////////////////////////////////////
+        /////////////////v///v//wNv8H4L1IIL2IIL2IIL20eb8/v/+//7////+////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7////////////////////////////
+        /////////////////////////////////////v/////+/v///f7+4+/+uNb8g7n6TZn3K4j2IoL1IYL1
+        H4L0H4L1TJr3+/3+////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////v//+vz/U574IIL1IIH1IYH1grj5////////////////////////////////////
+        ///////////////+/v7////+wdv8IIL2IIL2IIL2IIL20eX9/////v//////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7////////////////////////////
+        /////////////////////////////////f7/4O3+rND8fbT5SJb5K4f2JoT2IIL2IIH1IIL1IIL1IYL1
+        IIH2JYX1yd/9/v//////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7/v///v/+/v//////////////////////////////////////////////////////////
+        /////////v/+///+/v///////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////v//+vz+Vp75IYH2IIL1IYL1gbf7/v7/////////////////////////////////
+        //////////////7//////v//7vX+w9z9w9z9w9z9w9z98/j/////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v///v///v//
+        ///////+/v///v///f/+2Oj9ps37ca75PpL3JoX1IoP1IIL1H4L1IIL1HoL1IYL0IIL1IYL0IYP1IIL1
+        K4j1s9P7/f7+/v//////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdH7///+/v7/vdr9j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6j8D6
+        j8D6jsD6jcD6l8T77fX+/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////v/+xd39LIf2IYL1IIL1H4L1g7j6///+////////////////////////////////
+        /////////////v/+/v///////v/+///+////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////////v7/////
+        /v7//f7/2en9erX6No72I4L2IYL1H4L1IYL2IYL1H4P1IYL1IoH1IIL2IIL1IYL1IIL1IoL1JIP2ZKf4
+        2en+/v///v/+/v7////+////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdD7////////frX6IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2IYL2
+        IYL2IYL1IYL0MIr23Ov+/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////1uf+NYz3IYL2IIL0IYL1I4P0mcT8/v///v7+////////////////////////////
+        /////////////v///v///////v7//P7//f7//f7//f7/////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v/9///+/v//
+        8vj+gLf5JoT1IIL1IYL1H4L1IIL1IYL1IIL0IIL1IYL1IYL1IIL1IYP1JIT1LIj2VJ/5jr/61ef+/v7/
+        /v///v/+/v/+/v//////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7/v/+////fbX6IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1IIL1
+        IIL1H4L1H4L1Mov23Ov9/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /v//////////4+/+P5T3IYL1IIL1IIH1IoP2bKz69Pn/+Pj4wcHB9PT0////////////////////////
+        /////////////////////v//1ef+a6v5a6v5a6v5a6v54e7+////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7//////////////////////7/8/f+
+        XKL4IYL1H4L1H4L1IIL2IYL2H4L1IIL1H4L1IIL1J4X1Mov2W6H5kcD7xt798Pf+/v///////v//////
+        /////v/+////////////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdH8/v///v/+fbX6IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1IIH1
+        IIH1IIH1IIL1MIv23Ov9/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////v/+6/T9TZr3IIL2IIL1H4L1IYL1WqL57/b++/v7qqipW1lZnJub9/f3////////////////////
+        /////////////////////v//wdz8IIL2IIL2IIL2IIL20eX9/v///////v//////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v///f7+h7v6
+        IoL1IIL1IYL1IIL1IYH1IIL0Kof1No73Y6b4l8T7yuD88ff9//////7////+/v///v//////////////
+        ////////////////////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rND7/v/+/v7+ibz6N432N432N432N432N432N432N432N432N432N432N432N432N432N432
+        N432No72N472RZb43+39/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /v//8vf+YKT5IIL1IIL1IIL1I4L2TJn36fL++/z7sbCvXVtbWldXW1lZqKen+vr6////////////////
+        /////////////////v///v//wNv9IIL2IIL2IIL2IIL20eX9///+////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v//5vH+OI/2
+        H4L1IIL1IIL1JYX2WaH4nsj7zeL98ff+/////v7+///+/v/////////+/////v7/////////////////
+        ////////////////////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdH7/v//////9Pj+7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/7PT/
+        7PT/7PT/7PP+7fX++/3+/////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        9/r/c6/6IYL3IYL0IYL1IIP0PpL33ev+/v//6urpa2hqWldYWlhYWldXXltbuLa2/Pz8////////////
+        /////////////////v///v//y+L8IIL2IIL2IIL2IIL2yeD8/v7//////v//////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7PT/NY72IIH1H4H1H4H1kMH6////////////////////////////////
+        ////////////////////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v/+2+r9gLb6
+        fLT7fLT6e7T6psz8/P3//v/+/////////v///v/+/v7//////v///v//////////////////////////
+        ////////////////////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rdH8/v//////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ////////////////////////////////////////////////////////////////////////////+fz/
+        hLj7I4P1IIL2IIL0IYH1Moz20uX9/////////f39wsDAYF1cWldXWlhYWldXYV5ew8LC/v7+////////
+        /////////////////v///v//3+3+K4f2H4L2IIL2IIL2lcL7/f7+/v///v///v//////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////7fX/SJj3No33No32NY72m8b6////////////////////////////////
+        /////////////////v//////////////P5H3H4H1IIH1H4H1k8L7///////////////////+/v/////+
+        /////v/+/v/+///////+/////////////////////v///////////////v//////////////////////
+        /////////v///////v//////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////////////////////////v///P7/l8T7
+        JoX2IIL2IYL1H4L1K4j1wNv8/////v///////////Pv7tLKyXlxcWldXWldXWlhYZWNj0M/P/v7+////
+        ///////////////////////+8ff+UJv4IYL0IIH2IYL1Rpb44+/+/v///////v//////////////////
+        /////////////////////////////////////////////v/+/v7+//////7//v///v//////////////
+        /////////////////////////P3/4e793+z+3uz+3uz+7/b9/v////7+////////////////////////
+        /////////v/+/v///v//////////////P5H3H4H1IIH1H4H1k8L7///////////////////+/v/+/v//
+        /////////v/+/v/+///////////////+////////////////////////////////////////////////
+        /////v///f/+/v7+////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////////////////////v/+/v7/qM77LIj2
+        IYL1HoL1IIL0JoX1rdD8/v7/////////////////////+fn5paSkXVtbW1hYWlhYWlhYbGpq2tra////
+        /////////////////v///v///v7/jL77IIL1IYL1IYL1IIL1YaX44u7+/v/+/////////v//////////
+        /////////////////////////////////////////////v///v/+/v///////v///v//////////////
+        //////////////////////////////7+/v///v///v///v///v///v/+////////////////////////
+        /////////v///v/+/v//////////////P5H3H4H1IIH1H4H1k8L7/////////////////v/+3+39l8P7
+        lsP7lsP6l8P81+f9///////+///+////////////////////////////////////////////////////
+        ///+/v/+/v/+/v7+////////////////////////////////////////////////////////IIL2IIL2
+        IIL2IIL2rNH7////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////////////////////v7/udj7MYv2IYL1
+        IIL1IYH2JYT1mcX7/f7//v///v///v//////////////////9/f3mZeXXFlZWldXWldXWldXc3Fx5OTk
+        /////////////////////v//////3ev+N472IIL1IYL1IIL2H4L1QpX3jr/7xN380+b90+b+1Ob91Ob+
+        1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+3ev9/P7////+/v//9/r+4u7/4u7+4+7+4+/+
+        4+/+4+/+4+/+4+/+4+/+4+/+4u7+4u7+4+7+4u7+4+7+4u7+4+7+4u/+4+/+4+/+4+/+4+/+4+/+4+/+
+        4+/+4+7+6fP9/P79/v/+////////////P5H3H4H1IIH1H4H1k8L7/////////////////v//0uX+Lor2
+        IYL1IYL1IIL1R5b4sdT8z+T91Ob91Ob+1Ob91Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+1Ob+
+        1Ob90+b91uj9/v//////////////////////////////////////////////////////////IIL1IIL1
+        IIL2H4H1qc/7/v///v7//v/+////////////////////////////////////////////////////////
+        /////////////////////v///v/+/v///v///////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        ///////////////////////////////////////////////////+/v/+/////v//y+D+OpD3IIL1IYL2
+        IIL1IoP1hbr6+/z/////////////////////////////////////8/Pzi4qKW1hYWldXWldXWldXfHp6
+        7e3t/////////////////////////f7/n8j7J4X2HoL1IIH1IoL1IYL2IYH1IoP2LYn3Lon3LYn3Lon3
+        Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3WqH59/r//////v//yuD9OY/3Oo/3O5D3OpD3
+        OpD3OpD3OpD3OpD3OpD3OpD3OpD3OpD3OpD3OpD3OpD3OpD4OpD3OZD3OpD3OpD3OpD3OpD3OpD3OpD3
+        OpD3OpD3bqz5+Pv+////////////////P5H3H4H1IIH1H4H1k8L7///////////////////+9vr+TZv4
+        IYL1IYL1IIL1IYL2IIL1K4f2LYn3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3Lon3
+        LYn2Loj2OI72////////////////////////////////////////////////////////////KYf1IIL1
+        IoL1H4L1ebP6//7+/v////7/////////////////////////////////////////////////////////
+        /////////////////////v/+/v///v/+/v///////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////v/+/v/+/v7/2On9RZb3IIL1IYH2IIL1
+        IoL1dLD59fn+/v//////////////////////////////////////////7+7ugX5+WlhYWldXWldXWlhY
+        iIWF9fT0///////////////////////+9/v+hLn6JYX1IYL1H4L2IIL1IYL1IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2UJz49/r/////////w9z9IIL2IYH1IYL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2W6L49/v+////////////////P5H3H4H1IIH1H4H1k8L7///////////////////+///+t9X8
+        J4b1IIP1IIL1IIL1IYL1IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IYH1K4f1////////////////////////////////////////////////////////////WaD4IIL1
+        IYL2IIL2Lor2vtn8/v/+/v/+////////////////////////////////////////////////////////
+        /////////////////////////////////v/+/////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////////v7+5PD+UJz3IYL1IYL1IIL1IYL1
+        Yab47/b+/v/+/v//////////////////////////////////////////////5+fnd3V1WldXWldXWldX
+        WlhYkpGR+vr6/////////////////////v/++Pv/oMn7NYz2IYL1IYL1IIL1IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2UJz49/r/////////w9z9IIL2IYH1IYL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2W6L49/v+////////////////P5H3H4H1IIH1H4H1k8L7//////////////////7//v7/+/3+
+        mcX7KYb1IYL1IIH1IYL1IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IYH1K4f1////////////////////////////////////////////////////////////ocr8IIL1
+        IYL1IIL2IIL1L4r2c7D5ksH7kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6kcH6
+        kcH6kcH6kcH6kcH6kcH60eT9/v7////////+/////////v7/b635IIH1IYH1IIL1Yqb5////////////
+        /////////////////////////////////////////////////v//7/X+XaP4IYL1H4L1IIL1IYL1U575
+        6PL+/v/+/v/+/v/+////////////////////////////////////////////////397ecG1tWldXWldX
+        WldXW1lZoJ+f/f39/////////////v///v////7//f7+3Ov+ir36SJj3I4P1IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2UJz49/r/////////w9z9IIL2IYH1IYL2IIL2
+        IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2W6L49/v+////////////////P5H3H4H1IIH1H4H1k8L7/////////////////v/+/v///v//
+        +/3/w939ZKf4K4j1IYL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IYH1K4f1////////////////////////////////////////////////////////////8vf+QZP3
+        IIL1IYL2IIL1IIL1IYL1H4L1IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2o8r8/////v///////v///v///v7+3uz+zeL9zeL9zeL92+r+////////////
+        ////////////////////////////////////////////////////8Pb+z+P9zeL9zeL9zuL9zeL96fP+
+        ////////////////////////////////////////////////////////////////////6Ojo2dnZ2dnZ
+        2dnZ2dnZ3Nzc+vr6/////////////////////////////v///f7/8fj93uz9zuP9zeP+zeP+zeP+zeP+
+        zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zOL+2Oj9/P7/////////8Pf+zeL9zeL9zuP9zeP+
+        zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+
+        zeP+zeL+2+n9/P7//v/+//7+/f///v/+0+b9zeL9zuL9zeL+5/H+////////////////////////////
+        /////v/++Pv+6fP9zuL9zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+zeP+
+        zOP+zuL80OT+/v///////////////////////////////////////////////////////////v/+zOL9
+        Mor3IIL1IYL1HoL0H4P0IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2o8r8/////v///////v///v///v///v/+/////////v//////////////////
+        /////////////////////////////////////////////////v/+/////////////////v//////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////+/v///v/+////////////////////
+        ///////////////////////////////////////////////////////////+////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////7//////v7//v///v7//v///////v/+/v///v//////////////////////////////////
+        /////v/////+/v////7/////////////////////////////////////////////////////////////
+        ///+/f///v/+/v/+/////////////////////////////////////////////////////////v///v//
+        zOH9QpP3IIL1IYL1IIL1IIL1IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2o8r8/////v/////////+///////+/v//////////////////////////////
+        /////////////////////////////////////////////////v///////////////////v/+////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////+///+/v//////////////////////
+        /////////////////////////////////////////////////v///////////////////////v//////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////v/////////+/v///v/////////+/////v/+////////////////////////////////////
+        /////////v////7//v/+////////////////////////////////////////////////////////////
+        //////7//v///v///v///////////////////////////////////////////////////////v///v//
+        /v/+8ff+ocn8VJ34KIX2IIL1IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2IIL2
+        IIL2IIL2IIL2IIL2IIL2o8r8/////v///////v///v//////////////////////////////////////
+        /////////////////////////////////////////////////////////////v//////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////v//////////////////////
+        /////////////////////////////////////////////v/+/////////////////////v//////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////v//////////////////////////////////////////////////////////
+        /////////v///////v//////////////////////////////////////////////////////////////
+        /////v//////////////////////////////////////////////////////////////////
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAEAGABoAwAANgAAADAwAAABABgAqBwAAJ4DAAAgIAAAAQAgAKgQAABGIAAAKAAAABAA
+        AAAgAAAAAQAYAAAAAABA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAA
+        AABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAAAABV/wBV/wBV/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV/wBV/wBV/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV/wBV/wBV/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABV/wBV/wBV/wAAAABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAAAAAA
+        AABV/wBV/wBV/wAAAABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAAAAAAAABV/wBV/wBV/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV/wBV/wBV/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV/wBV/wBV/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAA
+        AAAAAABV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wBV/wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAAwAMAAIADAACP/wAAj/8AAI//AACIBwAAiAcAAI//
+        AACP/wAAj/8AAIADAADAAwAA//8AAP//AAAoAAAAMAAAAGAAAAABABgAAAAAAIAYAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAA
+        AAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/
+        AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AFX/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////////AAD///////8AAP///////wAA////////AAD///////8AAP//
+        /////wAA/wAAAAB/AAD+AAAAAH8AAPwAAAAAfwAA+AAAAAB/AADwAAAAAH8AAPAAAAAAfwAA8Af/////
+        AADwD/////8AAPAf/////wAA8B//////AADwH/////8AAPAf/////wAA8B//////AADwH/////8AAPAf
+        /////wAA8B//////AADwHgAAAf8AAPAeAAAB/wAA8B4AAAH/AADwHgAAAf8AAPAf/////wAA8B//////
+        AADwH/////8AAPAf/////wAA8B//////AADwH/////8AAPAf/////wAA8B//////AADwD/////8AAPAH
+        /////wAA8AAAAAB/AADwAAAAAH8AAPgAAAAAfwAA/AAAAAB/AAD+AAAAAH8AAP8AAAAAfwAA////////
+        AAD///////8AAP///////wAA////////AAD///////8AAP///////wAAKAAAACAAAABAAAAAAQAgAAAA
+        AACADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV//8AVf//AFX//wBV//8AVf//AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVf//AFX//wBV//8AVf//AFX//wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV
+        //8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV
+        //8AVf//AFX//wBV//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAVf//AFX//wBV//8AVf//AFX//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV//8AVf//AFX//wBV//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVf//AFX//wBV//8AVf//AFX//wAAAAAAAAAAAFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AAAAAAAA
+        AAAAVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV//8AVf//AFX//wBV
+        //8AAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVf//AFX//wBV
+        //8AVf//AFX//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV
+        //8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFX//wBV//8AVf//AFX//wBV//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAVf//AFX//wBV//8AVf//AFX//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFX//wBV//8AVf//AFX//wBV//8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVf//AFX//wBV//8AVf//AFX//wBV
+        //8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV
+        //8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AFX//wBV//8AVf//AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////////////////8AAAH+AAAB/AA
+        AAfgAAAH4H///+D////g////4P///+D////g////4P///+DAAB/gwAAf4MAAH+D////g////4P///+D/
+        ///g////4P///+B////gAAAH8AAAB/gAAAf8AAAH/////////////////////w==
+</value>
+  </data>
+</root>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Ôªøusing System;
+
+using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ElySCardDotNet
+{
+    /// <summary>
+    /// Wraps specific reader functions available with Elyctis reader.
+    /// For more information please refer to ElyRDRControl API document and Elyctis reader user manual.
+    /// </summary>
+    public class ElyRDRControl
+    {
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_OpenComm")]
+        internal static extern Int32 _RDR_OpenComm();
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_CloseComm")]
+        internal static extern Int32 _RDR_CloseComm();
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_SendCommand")]
+        internal static extern Int32 _RDR_SendCommand(byte byMessageType, byte bySlot,
+            byte[] lpInputBuffer, UInt32 nInBufferSize, byte[] lpOutputBuffer, ref UInt32 lpBytesReturned);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_GetFirmwareVersion")]
+        internal static extern Int32 _RDR_GetFirmwareVersion(ref byte byMajor, ref byte byMinor);
+        
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_GetSerialNumber")]
+        internal static extern Int32 _RDR_GetSerialNumber(byte[] lpSerialNumber);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_SetRF")]
+        internal static extern Int32 _RDR_SetRF( bool bActive);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_StopPolling")]
+        internal static extern Int32 _RDR_StopPolling();
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_StartPolling")]
+        internal static extern Int32 _RDR_StartPolling();
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_GetStaticRFParams")]
+        internal static extern Int32 _RDR_GetStaticRFParams(byte[] lpRFParams, ref UInt32 dwRFParamsSize);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_SetStaticRFParams")]
+        internal static extern Int32 _RDR_SetStaticRFParams(byte[] lpNewRFParams, UInt32 dwNewRFParamsSize);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_GetDynamicRFParams")]
+        internal static extern Int32 _RDR_GetDynamicRFParams(byte[] lpRFParams, ref UInt32 dwRFParamsSize);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_SetDynamicRFParams")]
+        internal static extern Int32 _RDR_SetDynamicRFParams(byte[] lpNewRFParams, UInt32 dwNewRFParamsSize);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_ReadCTLRegister")]
+        internal static extern Int32 _RDR_ReadCTLRegister(byte byAddress, ref byte pbyValue);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_WriteCTLRegister")]
+        internal static extern Int32 _RDR_WriteCTLRegister(byte byAddress, byte byValue);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_ListReaders")]
+        internal static extern Int32 _RDR_ListReaders([MarshalAs(UnmanagedType.LPArray, SizeConst=160)] byte[] lpSNList,
+            ref UInt32 lpSNListSize);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_OpenCommEx")]
+        internal static extern Int32 _RDR_OpenCommEx([MarshalAs(UnmanagedType.LPArray, SizeConst=32)]byte[] lpSN);
+
+        [DllImport("ElyRdrControl.dll", EntryPoint = "RDR_SetContactNegotiationSpeed")]
+        internal static extern Int32 _RDR_SetContactNegotiationSpeed(byte byFD);
+
+
+        internal const int MAX_CCID_DATA_SIZE = 254;
+
+        public static void RDR_OpenComm()
+        {
+            int iResult = _RDR_OpenComm();
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static void RDR_CloseComm()
+        {
+            int iResult = _RDR_CloseComm();
+            //if (iResult != 0)
+            //    throw new ElyRDRException(iResult);
+        }
+
+        public static byte[] RDR_SendCommand(byte byMessageType, byte bySlot, byte[] lpInputBuffer)
+        {
+            byte[] lpOutputBuffer = new byte[MAX_CCID_DATA_SIZE];
+            uint lpBytesReturned = MAX_CCID_DATA_SIZE;
+            int iResult = _RDR_SendCommand(byMessageType, bySlot, lpInputBuffer, (uint)lpInputBuffer.Length,
+                lpOutputBuffer, ref lpBytesReturned);
+
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+
+            return lpOutputBuffer;
+        }
+
+        public static void RDR_GetFirmwareVersion(ref byte byMajor, ref byte byMinor)
+        {
+            int iResult = _RDR_GetFirmwareVersion(ref byMajor, ref byMinor);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static string RDR_GetSerialNumber()
+        {
+            byte[] lpSerialNumber = new byte[32];
+            uint uiSNSize = (uint)lpSerialNumber.Length;
+            int iResult = _RDR_GetSerialNumber(lpSerialNumber);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+
+            return Encoding.ASCII.GetString(lpSerialNumber, 0, 32);
+        }
+
+        public static void RDR_SetRF( bool bActive )
+        {
+            int iResult = _RDR_SetRF(bActive);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static void RDR_StopPolling()
+        {
+            int iResult = _RDR_StopPolling();
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static void RDR_StartPolling()
+        {
+            int iResult = _RDR_StartPolling();
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static byte[] RDR_GetStaticRFParams()
+        {
+            byte [] RFParams = new byte[128];
+            uint uiRFParamsSize = (uint) RFParams.Length;
+            int iResult = _RDR_GetStaticRFParams(RFParams, ref uiRFParamsSize);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+            if( uiRFParamsSize != 128 )
+                throw new ElyRDRException("Unexpected byte array size!", SCardException.SCARD_F_UNKNOWN_ERROR);
+
+            return RFParams;
+        }
+
+        public static void RDR_SetStaticRFParams( byte[] RFParams )
+        {
+            int iResult = _RDR_SetStaticRFParams(RFParams, (uint)RFParams.Length);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static byte[] RDR_GetDynamicRFParams()
+        {
+            byte[] RFParams = new byte[128];
+            uint uiRFParamsSize = (uint)RFParams.Length;
+            int iResult = _RDR_GetDynamicRFParams(RFParams, ref uiRFParamsSize);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+            if (uiRFParamsSize != 128)
+                throw new ElyRDRException("Unexpected byte array size!", SCardException.SCARD_F_UNKNOWN_ERROR);
+
+            return RFParams;
+        }
+
+        public static void RDR_SetDynamicRFParams(byte[] RFParams)
+        {
+            int iResult = _RDR_SetDynamicRFParams(RFParams, (uint)RFParams.Length);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static string[] RDR_ListReaders()
+        {
+            uint iSize = 5;
+            byte[] lpSNList = new byte[160];
+            int iResult = _RDR_ListReaders(lpSNList, ref iSize);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+
+            string [] strSNList = new string[iSize];
+            for (int i = 0; i < iSize; ++i)
+            {
+                strSNList[i] = Encoding.ASCII.GetString(lpSNList, i * 32, 32);
+            }
+
+            return strSNList;
+        }
+
+        public static void RDR_OpenComm(string strSN)
+        {
+            byte [] bySN = ASCIIEncoding.ASCII.GetBytes(strSN);
+            if( bySN == null || bySN.Length != 32)
+                throw new FormatException("The format of the serial number is incorrect.");
+
+            int iResult = _RDR_OpenCommEx(bySN);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+
+        public static void RDR_SetContactNegotiationSpeed(byte byFD)
+        {
+            int iResult = _RDR_SetContactNegotiationSpeed(byFD);
+            if (iResult != 0)
+                throw new ElyRDRException(iResult);
+        }
+    }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Ôªø
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElySCardDotNet", "ElySCardDotNet.csproj", "{C7586489-47D3-43EF-BC83-83CF2D60A34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElySCardDotNetSample", "..\ElySCardDotNetSample\ElySCardDotNetSample.csproj", "{7FBF64E4-2A59-41ED-971A-79965F1C1292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7586489-47D3-43EF-BC83-83CF2D60A34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7586489-47D3-43EF-BC83-83CF2D60A34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7586489-47D3-43EF-BC83-83CF2D60A34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7586489-47D3-43EF-BC83-83CF2D60A34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBF64E4-2A59-41ED-971A-79965F1C1292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBF64E4-2A59-41ED-971A-79965F1C1292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBF64E4-2A59-41ED-971A-79965F1C1292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBF64E4-2A59-41ED-971A-79965F1C1292}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      using System;
+using System.Data;
+
+namespace ElySCardDotNet
+{
+	public interface ISCardConnection
+	{
+        
+        /// <summary>
+        ///  Wraps the PCSC function SCardConnect. This function establishes a connection with a smart card.
+		/// </summary>
+        /// <param name="ShareMode">Specifies a flag that indicates whether other applications can form connections to the card.</param>
+        /// <param name="PreferredProtocols">Specifies a bit mask of acceptable protocols for the connection.</param>
+		void Connect(SHARE ShareMode, PROTOCOL PreferredProtocols);
+
+		/// <summary>
+        /// Wraps the PCSC function SCardDisconnect. This function terminates a connection previously opened with a smart card.
+		/// </summary>
+        /// <param name="Disposition">Specifies what to do with the card in the connected reader on close.</param>
+        void Disconnect(DISCONNECT Disposition);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardReconnect. This function re-establishes an existing connection between the calling application and a smart card.
+        /// </summary>
+        /// <param name="ShareMode">Specifies a flag that indicates whether other applications can form connections to the card.</param>
+        /// <param name="PreferredProtocols">Specifies a bit mask of acceptable protocols for the connection.</param>
+        /// <param name="Initialization">Specifies the kind of initialization to perform on the card.</param>
+        void Reconnect(SHARE ShareMode, PROTOCOL PreferredProtocols, DISCONNECT Initialization);
+
+
+        /// <summary>
+        /// Gets a value indicating whether a smartcard is connected.
+        /// </summary>
+        bool Connected{ get; }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardStatus. This function provides the current status of a smart card in a reader.
+        /// </summary>
+        /// <param name="szReaderName">Receives a list of friendly names (multi-string) by which the currently connected reader is known.</param>
+        /// <param name="State">Pointer that specifies the current state of the smart card in the reader.</param>
+        /// <param name="Protocol">Pointer that specifies the current protocol, if any. The returned value is meaningful only if the returned value of pdwState is SCARD_SPECIFICMODE.</param>
+        byte[] GetStatus(out string[] szReaderName, out STATE State, out PROTOCOL Protocol);
+
+		/// <summary>
+        /// Wraps the PCSC function SCardTransmit. This function sends a service request to the smart card, and receives data back from the card.
+		/// </summary>
+        /// <param name="abSendBuffer">Byte array containing the APDU command.</param>
+        /// <param name="cbSendLength">Length of the APDU command.</param>
+        /// <returns>Byte array that contains the response from the card</returns>
+        byte[] Transmit(byte[] abSendBuffer, UInt32 cbSendLength);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardTransmit. It sends a service request to the smart card, and receives data back from the card.
+        /// Use this function to receive Extended APDU. 
+        /// </summary>
+        /// <param name="abSendBuffer">Byte array containing the APDU command.</param>
+        /// <param name="cbSendLength">Length of the APDU command.</param>
+        /// <param name="pcbRecvLength">Supplies the length, in bytes, of the expected response.</param>
+        /// <returns>Byte array that contains the response from the card</returns>
+        byte[] TransmitEx(byte[] abSendBuffer, UInt32 cbSendLength, UInt32 pcbRecvLength);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardControl. This function gives you direct control of the reader.
+        /// </summary>
+        /// <param name="dwControlCode">Specifies the control code for the operation. This value identifies the specific operation to be performed.</param>
+        /// <param name="lpInBuffer">Byte array that contains the data required to perform the operation. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not require input data.</param>
+        /// <param name="nInBufferSize">Specifies the size, in bytes, of the buffer lpInBuffer.</param>
+        /// <param name="nOutBufferSize">Specifies the size, in bytes, of the buffer lpOutBuffer.</param>
+        /// <returns>Returns a byte array that receives the operation's output data. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not produce output data.</returns>
+        byte[] Control(UInt32 dwControlCode, byte[] lpInBuffer, UInt32 nInBufferSize, UInt32 nOutBufferSize);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardBeginTransaction. This function starts a transaction, waiting for the completion of all other transactions before it begins.
+        /// </summary>
+        void BeginTransaction();
+
+        /// <summary>
+        /// Wraps the PCSC function SCardEndTransaction. This function completes a previously declared transaction, enabling other applications to resume interactions with the card.
+        /// </summary>
+        /// <param name="Disposition">Specifies the action that occurs when the connected reader closes.</param>
+        void EndTransaction(DISCONNECT Disposition);
+
+	}
+
+    public	enum SHARE
+	{
+        /// <summary>
+        /// This application is not willing to share this
+        /// card with other applications.
+        /// </summary>
+		Exclusive = 1,
+        /// <summary>
+        /// This application is willing to share this
+        /// card with other applications.
+        /// </summary>
+		Shared,
+		/// <summary>
+        /// This application demands direct control of
+        /// the reader, so it is not available to other
+        /// applications.
+		/// </summary>
+		Direct
+	}
+
+	public enum PROTOCOL
+	{
+        /// <summary>
+        /// There is no active protocol.
+        /// </summary>
+		Undefined	= 0x00000000,
+        /// <summary>
+        /// T=0 is the active protocol.
+        /// </summary>
+		T0			= 0x00000001,
+        /// <summary>
+        /// T=1 is the active protocol.
+        /// </summary>
+		T1			= 0x00000002,
+        /// <summary>
+        /// Raw is the active protocol.
+        /// </summary>
+		Raw			= 0x00010000,
+        /// <summary>
+        /// Use implicit PTS.
+        /// </summary>
+		Default		= unchecked ((int) 0x80000000),
+		T0orT1		= T0 | T1
+    }
+
+    public enum STATE
+    {
+        /// <summary>
+        /// This value implies the driver is unaware of the current state of the reader.
+        /// </summary>
+        SCARD_UNKNOWN = 0x00000000,
+        /// <summary>
+        /// There is no card in the card reader.
+        /// </summary>
+        SCARD_ABSENT = 0x00000001,
+        /// <summary>
+        /// A card is present in the card reader, but it is not in position for use.
+        /// </summary>
+        SCARD_PRESENT = 0x00000002,
+        /// <summary>
+        /// A card is in the reader and is in position for use. The card is not powered.
+        /// </summary>
+        SCARD_SWALLOWED = 0x00000003,
+        /// <summary>
+        /// The card is powered but the reader cannot determine its mode.
+        /// </summary>
+        SCARD_POWERED = 0x00000004,
+        /// <summary>
+        /// The card has been reset and is waiting for protocol negotiation.
+        /// </summary>
+        SCARD_NEGOTIABLE = 0x00000005,
+        /// <summary>
+        /// The card has been reset and a protocol has been negotiated.
+        /// </summary>
+        SCARD_SPECIFIC = 0x00000006
+    }
+
+	public enum DISCONNECT
+	{
+        /// <summary>
+        /// Don't do anything special on close
+        /// </summary>
+		Leave,
+        /// <summary>
+        /// Reset the card on close
+        /// </summary>
+		Reset,
+        /// <summary>
+        /// Power down the card on close
+        /// </summary>
+		Unpower,
+        /// <summary>
+        /// Eject the card on close
+        /// </summary>
+		Eject
+	}
+}
+                                     INDX( 	 ]„©           (   P  Ë         	                   âˇ   
+ x b     àˇ   	 ˆ∞”.Vq◊ X/"Õˆ∞”.Vq◊Z√ ≈x◊ 0      3!               E l y R D R C o n t r o l . c s       äˇ   
+ x f     àˇ   	 lØ’.Vq◊ ÒæsßÀ∆÷’.Vq◊.øÃ≈x◊                      E l y R D R E x c e p t i o n . c s   ãˇ   	 Ä l     àˇ   	 ˝˝’.Vq◊ +Xj°Õ˝˝’.Vq◊‘EŒ≈x◊       5               E l y S C a r d D o t N e t . c s p r o j     åˇ   	 x f     àˇ   	 L÷.Vq◊ ÒæsßÀL÷.Vq◊µ–≈x◊       ö              E l y S C a r d D o t N e t . s l n   çˇ   	 x h     àˇ   	  s÷.Vq◊ ÒæsßÀ s÷.Vq◊,—≈x◊        €               I S C a r d C o n n e c t i o n . c s éˇ   
+ x b     àˇ   	 õ÷.Vq◊ ÒæsßÀC¬÷.Vq◊‚ ”≈x◊                       I S C a r d M a n a g e r . c s       èˇ   
+ h V     àˇ   	 Ä^ŸÀ&” á⁄´¶W‘V_◊.Vq◊»‡◊ƒx◊                       
+ P r o p e r t i e s   ëˇ   	 x f     àˇ   	 V_◊.Vq◊ ÒæsßÀV_◊.Vq◊ë¯÷≈x◊ @      G:               S C a r d C o n n e c t i o n . c s   íˇ    x d     àˇ   	 uÌŸ.Vq◊ ÒæsßÀuÌŸ.Vq◊G¶ÿ≈x◊ Ä      πr               S C a r d E x c e p t i o n . c s     ìˇ   
+ p `     àˇ   	 uÌŸ.Vq◊ »&ò2"ÕuÌŸ.Vq◊	T⁄≈x◊        ˜               S C a r d M a n a g e r . c s îˇ   	 x d     àˇ   	 4P‹.Vq◊ ¡ H}ΩÀ4P‹.Vq◊/Ï‹≈x◊ 0      ,               W i n S C a r d N a t i v e . c s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ôªøusing System;
+
+using System.Collections.Generic;
+using System.Text;
+
+namespace ElySCardDotNet
+{
+    public interface ISCardManager
+    {
+        /// <summary>
+        /// Wraps the PCSC function SCardEstablishContext. This function establishes the resource manager context (the scope) within which database operations are performed.
+        /// </summary>
+        /// <param name="Scope">Specifies the scope of the resource manager context.</param>
+        void EstablishContext(SCOPE Scope);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardReleaseContext. This function closes an established resource manager context, freeing any resources allocated under that context.
+        /// </summary>        
+        void ReleaseContext();
+
+        /// <summary>
+        /// Wraps the PCSC funciton SCardListReaders. This function provides the list of readers.
+        /// </summary>
+        /// <returns>A string array that list the card readers.</returns>
+        string[] ListReaders();
+
+        /// <summary>
+        /// This function return a SCardConnection object associated with the specified reader.
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns>Specifies the card reader containing the smart card to use.</returns>
+        SCardConnection CreateConnection(string reader);
+
+        /// <summary>
+        /// Wraps the PCSC function SCardCancel. This function terminates all outstanding actions within a specific resource manager context.
+        /// </summary>        
+        void Cancel();
+
+        /// <summary>
+        /// Wraps the PCSC function SCardGetStatusChange. This function blocks execution until the current availability of the cards in a specific set of readers changes.
+        /// </summary>
+        /// <param name="dwTimeout">Specifies the maximum amount of time, in milliseconds, to wait for an action. A value of zero causes the function to return immediately. A value of INFINITE causes this function never to time out.</param>
+        /// <param name="rgReaderStates">Supplies an array of SCARD_READERSTATE structures that specify the readers to watch, and receives the result.</param>
+        /// <returns>If the timeout has expired the function returns the value SCARD_E_TIMEOUT.</returns>
+        long GetStatusChange(int dwTimeout, SCARD_READERSTATE[] rgReaderStates);
+
+    }
+
+    public enum SCOPE
+    {
+        /// <summary>
+        /// The context is a user context, and any
+        /// database operations are performed within the
+        /// domain of the user.
+        /// </summary>
+        User,
+        /// <summary>
+        /// The context is that of the current terminal,
+        /// and any database operations are performed
+        /// within the domain of that terminal.  (The
+        /// calling application must have appropriate
+        /// access permissions for any database actions.)
+        /// </summary>
+        Terminal,
+        /// <summary>
+        /// The context is the system context, and any
+        /// database operations are performed within the
+        /// domain of the system.  (The calling
+        /// application must have appropriate access
+        /// permissions for any database actions.)
+        /// </summary>
+        System
+    }
+
+    public enum SCARD_STATE
+    {
+        /// <summary>
+        /// The application is unaware of the current state, and would like to know.  The use of this value
+        /// results in an immediate return from state transition monitoring services.
+        /// </summary>
+        SCARD_STATE_UNAWARE = 0x00000000,
+        /// <summary>
+        /// The application requested that this reader be ignored.  No other bits will be set.
+        /// </summary>
+        SCARD_STATE_IGNORE = 0x00000001,
+        /// <summary>
+        /// This implies that there is a difference between the state believed by the application, and
+        /// the state known by the Service Manager.  When this bit is set, the application may assume a
+        /// significant state change has occurred on this reader.
+        /// </summary>
+        SCARD_STATE_CHANGED = 0x00000002,
+        /// <summary>
+        /// This implies that the given reader name is not recognized by the Service Manager.  If this bit
+        /// is set, then SCARD_STATE_CHANGED and SCARD_STATE_IGNORE will also be set.
+        /// </summary>
+        SCARD_STATE_UNKNOWN = 0x00000004,
+        /// <summary>
+        /// This implies that the actual state of this reader is not available.  If this bit is set,
+        /// then all the following bits are clear.
+        /// </summary>
+        SCARD_STATE_UNAVAILABLE = 0x00000008,
+        /// <summary>
+        /// This implies that there is not card in the reader.  If this bit is set, all the following bits
+        // will be clear.
+        /// </summary>
+        SCARD_STATE_EMPTY = 0x00000010,
+        /// <summary>
+        /// This implies that there is a card in the reader.
+        /// </summary>
+        SCARD_STATE_PRESENT = 0x00000020,
+        /// <summary>
+        /// This implies that there is a card in the reader with an ATR matching one of the target cards.
+        /// If this bit is set, SCARD_STATE_PRESENT will also be set.  This bit is only returned on the
+        /// SCardLocateCard() service.
+        /// </summary>
+        SCARD_STATE_ATRMATCH = 0x00000040,
+        /// <summary>
+        /// This implies that the card in the reader is allocated for exclusive use by another application.
+        /// If this bit is set, SCARD_STATE_PRESENT will also be set.
+        /// </summary>
+        SCARD_STATE_EXCLUSIVE = 0x00000080,
+        /// <summary>
+        /// This implies that the card in the reader is in use by one or more other applications, but may
+        /// be connected to in shared mode. If this bit is set, SCARD_STATE_PRESENT will also be set.
+        /// </summary>
+        SCARD_STATE_INUSE = 0x00000100,
+        /// <summary>
+        /// This implies that the card in the reader is unresponsive or not supported by the reader or
+        // software.
+        /// </summary>
+        SCARD_STATE_MUTE = 0x00000200,
+        /// <summary>
+        /// This implies that the card in the reader has not been powered up.
+        /// </summary>
+        SCARD_STATE_UNPOWERED = 0x00000400
+    }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ôªøusing System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("ElySCardDotNet")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Elyctis")]
+[assembly: AssemblyProduct("ElySCardDotNet")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+[assembly: ComVisible(false)]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("b889cd16-95eb-45e3-8785-c4e06e57dc67")]
+
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.11.0.0")]
+[assembly: AssemblyFileVersion("1.11.0.0")]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Ôªøusing System;
+
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+
+namespace ElySCardDotNet
+{
+    public class SCardConnection : ISCardConnection
+    {
+        private UInt32 m_hContext = 0;
+        private string m_reader = "";
+
+        private UInt32 m_hCard = 0;
+        private UInt32 m_nProtocol = (uint)PROTOCOL.T0;
+        private int m_nLastError = 0;
+
+
+        /// <summary>
+        /// ScardConnection constructor.
+        /// </summary>
+        /// <param name="hContext">Specifies the SCardContext handle.</param>
+        /// <param name="reader">Specifies the name of the reader containing the target card.</param>
+        public SCardConnection(UInt32 hContext, string reader)
+        {
+            m_hContext = hContext;
+            m_reader = reader;
+            m_connected = false;
+        }
+
+
+        /// <summary>
+        ///  Wraps the PCSC function SCardConnect. This function establishes a connection with a smart card.
+        /// </summary>
+        /// <param name="ShareMode">Specifies a flag that indicates whether other applications can form connections to the card.</param>
+        /// <param name="PreferredProtocols">Specifies a bit mask of acceptable protocols for the connection.</param>
+        public void Connect(SHARE ShareMode, PROTOCOL PreferredProtocols)
+        {
+            IntPtr hCard = IntPtr.Zero;
+            IntPtr pProtocol = IntPtr.Zero;
+
+            try
+            {
+                // Allocate the memory to receive the pointer's data
+                hCard = Marshal.AllocHGlobal(Marshal.SizeOf(m_hCard));
+                pProtocol = Marshal.AllocHGlobal(Marshal.SizeOf(m_nProtocol));
+
+                m_nLastError = WinSCardNative._SCardConnect(m_hContext, m_reader,
+                    (uint)ShareMode, (uint)PreferredProtocols, hCard, pProtocol);
+
+                if (m_nLastError != 0)
+                {
+                    string msg = "SCardConnect error: " + m_nLastError;
+
+                    throw new SCardException(m_nLastError);
+                }
+
+                m_hCard = (uint)Marshal.ReadInt32(hCard);
+                m_nProtocol = (uint)Marshal.ReadInt32(pProtocol);
+                m_connected = true;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(hCard);
+                Marshal.FreeHGlobal(pProtocol);
+            }
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardDisconnect. This function terminates a connection previously opened with a smart card.
+        /// </summary>
+        /// <param name="Disposition">Specifies what to do with the card in the connected reader on close.</param>
+        public void Disconnect(DISCONNECT Disposition)
+        {
+            if (m_hCard != 0)
+            {
+                m_nLastError = WinSCardNative._SCardDisconnect(m_hCard, (uint) Disposition);
+
+                if (m_nLastError != 0)
+                {
+                    string msg = "SCardDisconnect error: " + m_nLastError;
+                    //throw new SCardException(msg, m_nLastError);
+                    throw new SCardException(m_nLastError);
+                }
+                m_connected = false;
+                m_hCard = 0;
+            }
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardReconnect. This function re-establishes an existing connection between the calling application and a smart card.
+        /// </summary>
+        /// <param name="ShareMode">Specifies a flag that indicates whether other applications can form connections to the card.</param>
+        /// <param name="PreferredProtocols">Specifies a bit mask of acceptable protocols for the connection.</param>
+        /// <param name="Initialization">Specifies the kind of initialization to perform on the card.</param>
+        public void Reconnect(SHARE ShareMode, PROTOCOL PreferredProtocols, DISCONNECT Initialization)
+        {
+            IntPtr pProtocol = IntPtr.Zero;
+            try
+            {
+                if (m_hCard != 0)
+                {
+                    // Allocate the memory to receive the pointer's data
+                    pProtocol = Marshal.AllocHGlobal(Marshal.SizeOf(m_nProtocol));
+
+                    m_nLastError = WinSCardNative._SCardReconnect(m_hCard, (uint)ShareMode, (uint)PreferredProtocols,
+                        (uint)Initialization, pProtocol);
+
+                    if (m_nLastError != 0)
+                    {
+                        string msg = "SCardReconnect error: " + m_nLastError;
+                        throw new SCardException(m_nLastError);
+                    }
+
+                    m_nProtocol = (uint)Marshal.ReadInt32(pProtocol);
+                    m_connected = true;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(pProtocol);
+            }
+        }
+
+
+        /// <summary>
+        /// Gets a value indicating whether a smartcard is connected.
+        /// </summary>
+        public bool Connected
+        {
+            get { return m_connected; }
+        }private bool m_connected;
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardStatus. This function provides the current status of a smart card in a reader.
+        /// </summary>
+        /// <param name="szReaderName">Receives a list of friendly names (multi-string) by which the currently connected reader is known.</param>
+        /// <param name="State">Pointer that specifies the current state of the smart card in the reader.</param>
+        /// <param name="Protocol">Pointer that specifies the current protocol, if any. The returned value is meaningful only if the returned value of pdwState is SCARD_SPECIFICMODE.</param>
+        public byte[] GetStatus(out string[] sListReaders, out STATE State, out PROTOCOL Protocol)
+        {
+            UInt32 pcchReaderLen = WinSCardNative.SCARD_AUTOALLOCATE;
+            IntPtr szReaderName = IntPtr.Zero;
+            string sReaders;
+            byte[] pbATR = new byte[33];
+            UInt32 pbcAtrLen = 33;
+
+            UInt32 pdwState, pdwProtocol;
+
+            m_nLastError = WinSCardNative._SCardStatus(m_hCard, out szReaderName, ref pcchReaderLen,
+                out pdwState, out pdwProtocol, pbATR, out pbcAtrLen);
+
+            if (m_nLastError == 0)
+            {
+                State = (STATE)pdwState;
+                Protocol = (PROTOCOL)pdwProtocol;
+
+                // Copy the string to managed memory and
+                // Remove the two '\0' last characters indicating the end of string
+                sReaders = Marshal.PtrToStringUni(szReaderName, (int)(pcchReaderLen - 2));
+
+                // Free allocated memory by SCARD_AUTOALLOCATE use
+                WinSCardNative._SCardFreeMemory(m_hContext, szReaderName);
+
+                // Next we split up the null delimited strings into a string array
+                char[] delimiter = new char[1];
+                delimiter[0] = Convert.ToChar(0);
+
+                sListReaders = sReaders.Split(delimiter);
+                Array.Sort(sListReaders);
+
+                byte[] resizedATR = new byte[pbcAtrLen];
+                Array.Copy(pbATR, resizedATR, (int)pbcAtrLen);
+                return resizedATR;
+            }
+            else
+            {
+                string msg = "SCardStatus error: " + m_nLastError;
+                throw new SCardException(m_nLastError);
+            }
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardTransmit. This function sends a service request to the smart card, and receives data back from the card.
+        /// </summary>
+        /// <param name="abSendBuffer">Byte array containing the APDU command.</param>
+        /// <param name="cbSendLength">Length of the APDU command.</param>
+        /// <returns>Byte array that contains the response from the card</returns>
+        public byte[] Transmit(byte[] baSendBuffer, UInt32 cbSendLength)
+        {
+            IntPtr pioSendPci;
+            
+            // Maximun length for APDU response + 2 status bytes
+            byte[] baRecvBuffer = new byte[258];
+            uint pcbRecvLength = (uint) baRecvBuffer.Length;
+
+            if (m_nProtocol == (uint)PROTOCOL.T0)
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_T0;
+            }
+            else if (m_nProtocol == (uint)PROTOCOL.T1)
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_T1;
+            }
+            else
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_RAW;
+            }
+
+            m_nLastError = WinSCardNative._SCardTransmit(m_hCard, pioSendPci, baSendBuffer, cbSendLength,
+                IntPtr.Zero, baRecvBuffer, ref pcbRecvLength);
+
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardTransmit error: " + m_nLastError;
+                throw new SCardException(m_nLastError);
+            }
+
+
+            byte[] baResizedArray = new byte[pcbRecvLength];
+            Array.Copy(baRecvBuffer, baResizedArray, (int)pcbRecvLength);
+            return baResizedArray;
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardTransmit. It function sends a service request to the smart card, and receives data back from the card.
+        /// Use this function to receive Extended APDU. 
+        /// </summary>
+        /// <param name="abSendBuffer">Byte array containing the APDU command.</param>
+        /// <param name="cbSendLength">Length of the APDU command.</param>
+        /// <param name="pcbRecvLength">Supplies the length, in bytes, of the expected response.</param>
+        /// <returns>Byte array that contains the response from the card</returns>
+        public byte[] TransmitEx(byte[] baSendBuffer, UInt32 cbSendLength, UInt32 pcbRecvLength)
+        {
+            IntPtr pioSendPci;
+
+            byte[] baRecvBuffer = new byte[pcbRecvLength];
+
+            if (m_nProtocol == (uint)PROTOCOL.T0)
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_T0;
+            }
+            else if (m_nProtocol == (uint)PROTOCOL.T1)
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_T1;
+            }
+            else
+            {
+                pioSendPci = WinSCardNative.SCARD_PCI_RAW;
+            }
+
+            m_nLastError = WinSCardNative._SCardTransmit(m_hCard, pioSendPci, baSendBuffer, cbSendLength,
+                IntPtr.Zero, baRecvBuffer, ref pcbRecvLength);
+
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardTransmit error: " + m_nLastError;
+                throw new SCardException(m_nLastError);
+            }
+
+
+            byte[] baResizedArray = new byte[pcbRecvLength];
+            Array.Copy(baRecvBuffer, baResizedArray, (int)pcbRecvLength);
+            return baResizedArray;
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardControl. This function gives you direct control of the reader.
+        /// </summary>
+        /// <param name="dwControlCode">Specifies the control code for the operation. This value identifies the specific operation to be performed.</param>
+        /// <param name="lpInBuffer">Byte array that contains the data required to perform the operation. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not require input data.</param>
+        /// <param name="nInBufferSize">Specifies the size, in bytes, of the buffer lpInBuffer.</param>
+        /// <param name="nOutBufferSize">Specifies the size, in bytes, of the buffer lpOutBuffer.</param>
+        /// <returns>Returns a byte array that receives the operation's output data. This parameter can be NULL if the dwControlCode parameter specifies an operation that does not produce output data.</returns>
+        public byte[] Control(UInt32 dwControlCode, byte[] lpInBuffer, UInt32 nInBufferSize,
+            UInt32 nOutBufferSize )
+        {
+            UInt32 lpBytesReturned;
+            byte[] baOutBuffer = null;
+            IntPtr lpOutBuffer = IntPtr.Zero;
+
+            try
+            {
+                if (nOutBufferSize > 0)
+                {
+                    // Alloc memory for output buffer
+                    lpOutBuffer = Marshal.AllocHGlobal((int)nOutBufferSize);
+                }
+
+                m_nLastError = WinSCardNative._SCardControl(m_hCard, dwControlCode, lpInBuffer, nInBufferSize,
+                    lpOutBuffer, nOutBufferSize, out lpBytesReturned);
+
+                if (m_nLastError != 0)
+                {
+                    string msg = "SCardControl error: " + m_nLastError;
+                    //throw new SCardException(msg, m_nLastError);
+                    throw new SCardException(m_nLastError);
+                }
+
+                if (lpBytesReturned > 0)
+                {
+                    baOutBuffer = new byte[lpBytesReturned];
+                    Marshal.Copy(lpOutBuffer, baOutBuffer, 0, (int)lpBytesReturned);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(lpOutBuffer);
+            }
+
+            return baOutBuffer;
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardBeginTransaction. This function starts a transaction, waiting for the completion of all other transactions before it begins.
+        /// </summary>
+        public void BeginTransaction()
+        {
+            m_nLastError = WinSCardNative._SCardBeginTransaction(m_hCard);
+            
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardBeginTransaction error: " + m_nLastError;
+                throw new SCardException(m_nLastError);
+            }
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardEndTransaction. This function completes a previously declared transaction, enabling other applications to resume interactions with the card.
+        /// </summary>
+        /// <param name="Disposition">Specifies the action that occurs when the connected reader closes.</param>
+        public void EndTransaction(DISCONNECT Disposition)
+        {
+            m_nLastError = WinSCardNative._SCardEndTransaction(m_hCard, (uint) Disposition);
+
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardEndTransaction error: " + m_nLastError;
+                throw new SCardException(m_nLastError);
+            }
+        }
+    }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         using System;
+
+namespace ElySCardDotNet
+{
+    /// <summary>
+    /// Summary description for SCardException.
+    /// </summary>
+    public class SCardException : Exception
+    {
+        //
+        // MessageId: SCARD_F_INTERNAL_ERROR
+        //
+        // MessageText:
+        //
+        //  An internal consistency check failed.
+        //
+        public const long SCARD_F_INTERNAL_ERROR = unchecked((long)0xffffffff80100001);
+
+
+        //
+        // MessageId: SCARD_E_CANCELLED
+        //
+        // MessageText:
+        //
+        //  The action was cancelled by an SCardCancel request.
+        //
+        public const long SCARD_E_CANCELLED = unchecked((long)0xffffffff80100002);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_HANDLE
+        //
+        // MessageText:
+        //
+        //  The supplied handle was invalid.
+        //
+        public const long SCARD_E_INVALID_HANDLE = unchecked((long)0xffffffff80100003);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_PARAMETER
+        //
+        // MessageText:
+        //
+        //  One or more of the supplied parameters could not be properly interpreted.
+        //
+        public const long SCARD_E_INVALID_PARAMETER = unchecked((long)0xffffffff80100004);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_TARGET
+        //
+        // MessageText:
+        //
+        //  Registry startup information is missing or invalid.
+        //
+        public const long SCARD_E_INVALID_TARGET = unchecked((long)0xffffffff80100005);
+
+
+        //
+        // MessageId: SCARD_E_NO_MEMORY
+        //
+        // MessageText:
+        //
+        //  Not enough memory available to complete this command.
+        //
+        public const long SCARD_E_NO_MEMORY = unchecked((long)0xffffffff80100006);
+
+
+        //
+        // MessageId: SCARD_F_WAITED_TOO_LONG
+        //
+        // MessageText:
+        //
+        //  An internal consistency timer has expired.
+        //
+        public const long SCARD_F_WAITED_TOO_LONG = unchecked((long)0xffffffff80100007);
+
+
+        //
+        // MessageId: SCARD_E_INSUFFICIENT_BUFFER
+        //
+        // MessageText:
+        //
+        //  The data buffer to receive returned data is too small for the returned data.
+        //
+        public const long SCARD_E_INSUFFICIENT_BUFFER = unchecked((long)0xffffffff80100008);
+
+
+        //
+        // MessageId: SCARD_E_UNKNOWN_READER
+        //
+        // MessageText:
+        //
+        //  The specified reader name is not recognized.
+        //
+        public const long SCARD_E_UNKNOWN_READER = unchecked((long)0xffffffff80100009);
+
+
+        //
+        // MessageId: SCARD_E_TIMEOUT
+        //
+        // MessageText:
+        //
+        //  The user-specified timeout value has expired.
+        //
+        public const long SCARD_E_TIMEOUT = unchecked((long)0xffffffff8010000A);
+
+
+        //
+        // MessageId: SCARD_E_SHARING_VIOLATION
+        //
+        // MessageText:
+        //
+        //  The smart card cannot be accessed because of other connections outstanding.
+        //
+        public const long SCARD_E_SHARING_VIOLATION = unchecked((long)0xffffffff8010000B);
+
+
+        //
+        // MessageId: SCARD_E_NO_SMARTCARD
+        //
+        // MessageText:
+        //
+        //  The operation requires a Smart Card, but no Smart Card is currently in the device.
+        //
+        public const long SCARD_E_NO_SMARTCARD = unchecked((long)0xffffffff8010000C);
+
+
+        //
+        // MessageId: SCARD_E_UNKNOWN_CARD
+        //
+        // MessageText:
+        //
+        //  The specified smart card name is not recognized.
+        //
+        public const long SCARD_E_UNKNOWN_CARD = unchecked((long)0xffffffff8010000D);
+
+
+        //
+        // MessageId: SCARD_E_CANT_DISPOSE
+        //
+        // MessageText:
+        //
+        //  The system could not dispose of the media in the requested manner.
+        //
+        public const long SCARD_E_CANT_DISPOSE = unchecked((long)0xffffffff8010000E);
+
+
+        //
+        // MessageId: SCARD_E_PROTO_MISMATCH
+        //
+        // MessageText:
+        //
+        //  The requested protocols are incompatible with the protocol currently in use with the smart card.
+        //
+        public const long SCARD_E_PROTO_MISMATCH = unchecked((long)0xffffffff8010000F);
+
+
+        //
+        // MessageId: SCARD_E_NOT_READY
+        //
+        // MessageText:
+        //
+        //  The reader or smart card is not ready to accept commands.
+        //
+        public const long SCARD_E_NOT_READY = unchecked((long)0xffffffff80100010);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_VALUE
+        //
+        // MessageText:
+        //
+        //  One or more of the supplied parameters values could not be properly interpreted.
+        //
+        public const long SCARD_E_INVALID_VALUE = unchecked((long)0xffffffff80100011);
+
+
+        //
+        // MessageId: SCARD_E_SYSTEM_CANCELLED
+        //
+        // MessageText:
+        //
+        //  The action was cancelled by the system, presumably to log off or shut down.
+        //
+        public const long SCARD_E_SYSTEM_CANCELLED = unchecked((long)0xffffffff80100012);
+
+
+        //
+        // MessageId: SCARD_F_COMM_ERROR
+        //
+        // MessageText:
+        //
+        //  An internal communications error has been detected.
+        //
+        public const long SCARD_F_COMM_ERROR = unchecked((long)0xffffffff80100013);
+
+
+        //
+        // MessageId: SCARD_F_UNKNOWN_ERROR
+        //
+        // MessageText:
+        //
+        //  An internal error has been detected, but the source is unknown.
+        //
+        public const long SCARD_F_UNKNOWN_ERROR = unchecked((long)0xffffffff80100014);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_ATR
+        //
+        // MessageText:
+        //
+        //  An ATR obtained from the registry is not a valid ATR string.
+        //
+        public const long SCARD_E_INVALID_ATR = unchecked((long)0xffffffff80100015);
+
+
+        //
+        // MessageId: SCARD_E_NOT_TRANSACTED
+        //
+        // MessageText:
+        //
+        //  An attempt was made to end a non-existent transaction.
+        //
+        public const long SCARD_E_NOT_TRANSACTED = unchecked((long)0xffffffff80100016);
+
+
+        //
+        // MessageId: SCARD_E_READER_UNAVAILABLE
+        //
+        // MessageText:
+        //
+        //  The specified reader is not currently available for use.
+        //
+        public const long SCARD_E_READER_UNAVAILABLE = unchecked((long)0xffffffff80100017);
+
+
+        //
+        // MessageId: SCARD_P_SHUTDOWN
+        //
+        // MessageText:
+        //
+        //  The operation has been aborted to allow the server application to exit.
+        //
+        public const long SCARD_P_SHUTDOWN = unchecked((long)0xffffffff80100018);
+
+
+        //
+        // MessageId: SCARD_E_PCI_TOO_SMALL
+        //
+        // MessageText:
+        //
+        //  The PCI Receive buffer was too small.
+        //
+        public const long SCARD_E_PCI_TOO_SMALL = unchecked((long)0xffffffff80100019);
+
+
+        //
+        // MessageId: SCARD_E_READER_UNSUPPORTED
+        //
+        // MessageText:
+        //
+        //  The reader driver does not meet minimal requirements for support.
+        //
+        public const long SCARD_E_READER_UNSUPPORTED = unchecked((long)0xffffffff8010001A);
+
+
+        //
+        // MessageId: SCARD_E_DUPLICATE_READER
+        //
+        // MessageText:
+        //
+        //  The reader driver did not produce a unique reader name.
+        //
+        public const long SCARD_E_DUPLICATE_READER = unchecked((long)0xffffffff8010001B);
+
+
+        //
+        // MessageId: SCARD_E_CARD_UNSUPPORTED
+        //
+        // MessageText:
+        //
+        //  The smart card does not meet minimal requirements for support.
+        //
+        public const long SCARD_E_CARD_UNSUPPORTED = unchecked((long)0xffffffff8010001C);
+
+
+        //
+        // MessageId: SCARD_E_NO_SERVICE
+        //
+        // MessageText:
+        //
+        //  The Smart card resource manager is not running.
+        //
+        public const long SCARD_E_NO_SERVICE = unchecked((long)0xffffffff8010001D);
+
+
+        //
+        // MessageId: SCARD_E_SERVICE_STOPPED
+        //
+        // MessageText:
+        //
+        //  The Smart card resource manager has shut down.
+        //
+        public const long SCARD_E_SERVICE_STOPPED = unchecked((long)0xffffffff8010001E);
+
+
+        //
+        // MessageId: SCARD_E_UNEXPECTED
+        //
+        // MessageText:
+        //
+        //  An unexpected card error has occurred.
+        //
+        public const long SCARD_E_UNEXPECTED = unchecked((long)0xffffffff8010001F);
+
+
+        //
+        // MessageId: SCARD_E_ICC_INSTALLATION
+        //
+        // MessageText:
+        //
+        //  No Primary Provider can be found for the smart card.
+        //
+        public const long SCARD_E_ICC_INSTALLATION = unchecked((long)0xffffffff80100020);
+
+
+        //
+        // MessageId: SCARD_E_ICC_CREATEORDER
+        //
+        // MessageText:
+        //
+        //  The requested order of object creation is not supported.
+        //
+        public const long SCARD_E_ICC_CREATEORDER = unchecked((long)0xffffffff80100021);
+
+
+        //
+        // MessageId: SCARD_E_UNSUPPORTED_FEATURE
+        //
+        // MessageText:
+        //
+        //  This smart card does not support the requested feature.
+        //
+        public const long SCARD_E_UNSUPPORTED_FEATURE = unchecked((long)0xffffffff80100022);
+
+
+        //
+        // MessageId: SCARD_E_DIR_NOT_FOUND
+        //
+        // MessageText:
+        //
+        //  The identified directory does not exist in the smart card.
+        //
+        public const long SCARD_E_DIR_NOT_FOUND = unchecked((long)0xffffffff80100023);
+
+
+        //
+        // MessageId: SCARD_E_FILE_NOT_FOUND
+        //
+        // MessageText:
+        //
+        //  The identified file does not exist in the smart card.
+        //
+        public const long SCARD_E_FILE_NOT_FOUND = unchecked((long)0xffffffff80100024);
+
+
+        //
+        // MessageId: SCARD_E_NO_DIR
+        //
+        // MessageText:
+        //
+        //  The supplied path does not represent a smart card directory.
+        //
+        public const long SCARD_E_NO_DIR = unchecked((long)0xffffffff80100025);
+
+
+        //
+        // MessageId: SCARD_E_NO_FILE
+        //
+        // MessageText:
+        //
+        //  The supplied path does not represent a smart card file.
+        //
+        public const long SCARD_E_NO_FILE = unchecked((long)0xffffffff80100026);
+
+
+        //
+        // MessageId: SCARD_E_NO_ACCESS
+        //
+        // MessageText:
+        //
+        //  Access is denied to this file.
+        //
+        public const long SCARD_E_NO_ACCESS = unchecked((long)0xffffffff80100027);
+
+
+        //
+        // MessageId: SCARD_E_WRITE_TOO_MANY
+        //
+        // MessageText:
+        //
+        //  The smartcard does not have enough memory to store the information.
+        //
+        public const long SCARD_E_WRITE_TOO_MANY = unchecked((long)0xffffffff80100028);
+
+
+        //
+        // MessageId: SCARD_E_BAD_SEEK
+        //
+        // MessageText:
+        //
+        //  There was an error trying to set the smart card file object pointer.
+        //
+        public const long SCARD_E_BAD_SEEK = unchecked((long)0xffffffff80100029);
+
+
+        //
+        // MessageId: SCARD_E_INVALID_CHV
+        //
+        // MessageText:
+        //
+        //  The supplied PIN is incorrect.
+        //
+        public const long SCARD_E_INVALID_CHV = unchecked((long)0xffffffff8010002A);
+
+
+        //
+        // MessageId: SCARD_E_UNKNOWN_RES_MNG
+        //
+        // MessageText:
+        //
+        //  An unrecognized error code was returned from a layered component.
+        //
+        public const long SCARD_E_UNKNOWN_RES_MNG = unchecked((long)0xffffffff8010002B);
+
+
+        //
+        // MessageId: SCARD_E_NO_SUCH_CERTIFICATE
+        //
+        // MessageText:
+        //
+        //  The requested certificate does not exist.
+        //
+        public const long SCARD_E_NO_SUCH_CERTIFICATE = unchecked((long)0xffffffff8010002C);
+
+
+        //
+        // MessageId: SCARD_E_CERTIFICATE_UNAVAILABLE
+        //
+        // MessageText:
+        //
+        //  The requested certificate could not be obtained.
+        //
+        public const long SCARD_E_CERTIFICATE_UNAVAILABLE = unchecked((long)0xffffffff8010002D);
+
+
+        //
+        // MessageId: SCARD_E_NO_READERS_AVAILABLE
+        //
+        // MessageText:
+        //
+        //  Cannot find a smart card reader.
+        //
+        public const long SCARD_E_NO_READERS_AVAILABLE = unchecked((long)0xffffffff8010002E);
+
+
+        //
+        // MessageId: SCARD_E_COMM_DATA_LOST
+        //
+        // MessageText:
+        //
+        //  A communications error with the smart card has been detected.  Retry the operation.
+        //
+        public const long SCARD_E_COMM_DATA_LOST = unchecked((long)0xffffffff8010002F);
+
+
+        //
+        // MessageId: SCARD_E_NO_KEY_CONTAINER
+        //
+        // MessageText:
+        //
+        //  The requested key container does not exist on the smart card.
+        //
+        public const long SCARD_E_NO_KEY_CONTAINER = unchecked((long)0xffffffff80100030);
+
+
+        //
+        // MessageId: SCARD_E_SERVER_TOO_BUSY
+        //
+        // MessageText:
+        //
+        //  The Smart card resource manager is too busy to complete this operation.
+        //
+        public const long SCARD_E_SERVER_TOO_BUSY = unchecked((long)0xffffffff80100031);
+
+
+        //
+        // These are warning codes.
+        //
+        //
+        // MessageId: SCARD_W_UNSUPPORTED_CARD
+        //
+        // MessageText:
+        //
+        //  The reader cannot communicate with the smart card, due to ATR configuration conflicts.
+        //
+        public const long SCARD_W_UNSUPPORTED_CARD = unchecked((long)0xffffffff80100065);
+
+
+        //
+        // MessageId: SCARD_W_UNRESPONSIVE_CARD
+        //
+        // MessageText:
+        //
+        //  The smart card is not responding to a reset.
+        //
+        public const long SCARD_W_UNRESPONSIVE_CARD = unchecked((long)0xffffffff80100066);
+
+
+        //
+        // MessageId: SCARD_W_UNPOWERED_CARD
+        //
+        // MessageText:
+        //
+        //  Power has been removed from the smart card, so that further communication is not possible.
+        //
+        public const long SCARD_W_UNPOWERED_CARD = unchecked((long)0xffffffff80100067);
+
+
+        //
+        // MessageId: SCARD_W_RESET_CARD
+        //
+        // MessageText:
+        //
+        //  The smart card has been reset, so any shared state information is invalid.
+        //
+        public const long SCARD_W_RESET_CARD = unchecked((long)0xffffffff80100068);
+
+
+        //
+        // MessageId: SCARD_W_REMOVED_CARD
+        //
+        // MessageText:
+        //
+        //  The smart card has been removed, so that further communication is not possible.
+        //
+        public const long SCARD_W_REMOVED_CARD = unchecked((long)0xffffffff80100069);
+
+
+        //
+        // MessageId: SCARD_W_SECURITY_VIOLATION
+        //
+        // MessageText:
+        //
+        //  Access was denied because of a security violation.
+        //
+        public const long SCARD_W_SECURITY_VIOLATION = unchecked((long)0xffffffff8010006A);
+
+
+        //
+        // MessageId: SCARD_W_WRONG_CHV
+        //
+        // MessageText:
+        //
+        //  The card cannot be accessed because the wrong PIN was presented.
+        //
+        public const long SCARD_W_WRONG_CHV = unchecked((long)0xffffffff8010006B);
+
+
+        //
+        // MessageId: SCARD_W_CHV_BLOCKED
+        //
+        // MessageText:
+        //
+        //  The card cannot be accessed because the maximum number of PIN entry attempts has been reached.
+        //
+        public const long SCARD_W_CHV_BLOCKED = unchecked((long)0xffffffff8010006C);
+
+
+        //
+        // MessageId: SCARD_W_EOF
+        //
+        // MessageText:
+        //
+        //  The end of the smart card file has been reached.
+        //
+        public const long SCARD_W_EOF = unchecked((long)0xffffffff8010006D);
+
+
+        //
+        // MessageId: SCARD_W_CANCELLED_BY_USER
+        //
+        // MessageText:
+        //
+        //  The action was cancelled by the user.
+        //
+        public const long SCARD_W_CANCELLED_BY_USER = unchecked((long)0xffffffff8010006E);
+
+
+        //
+        // MessageId: SCARD_W_CARD_NOT_AUTHENTICATED
+        //
+        // MessageText:
+        //
+        //  No PIN was presented to the smart card.
+        //
+        public const long SCARD_W_CARD_NOT_AUTHENTICATED = unchecked((long)0xffffffff8010006F);
+
+        
+        /// <summary>
+        /// Gets the Smart Card error value.
+        /// </summary>
+        public long ErrCode
+        {
+            get { return m_errCode; }
+        }private long m_errCode;
+
+        private string m_errMsg = "";
+
+
+        /// <summary>
+        /// Get the error message for the specified error code.
+        /// </summary>
+        /// <param name="errorCode"> Specified the Smart Card error code.</param>
+        /// <returns>Returns the corresponding Smart Card the error message.
+        /// If the error code is not relative to smart card a default error message is returned.</returns>
+        public static string getSCardMessageException(long errorCode)
+        {
+            string msg;
+
+            switch (errorCode)
+            {
+                case SCARD_F_INTERNAL_ERROR:
+                    msg = "An internal consistency check failed.";
+                    break;
+
+                case SCARD_E_CANCELLED:
+                    msg = "The action was cancelled by an SCardCancel request.";
+                    break;
+
+                case SCARD_E_INVALID_HANDLE:
+                    msg = "The supplied handle was invalid.";
+                    break;
+
+                case SCARD_E_INVALID_PARAMETER:
+                    msg = "One or more of the supplied parameters could not be properly interpreted.";
+                    break;
+
+                case SCARD_E_INVALID_TARGET:
+                    msg = "Registry startup information is missing or invalid.";
+                    break;
+
+                case SCARD_E_NO_MEMORY:
+                    msg = "Not enough memory available to complete this command.";
+                    break;
+
+                case SCARD_F_WAITED_TOO_LONG:
+                    msg = "An internal consistency timer has expired.";
+                    break;
+
+                case SCARD_E_INSUFFICIENT_BUFFER:
+                    msg = "The data buffer to receive returned data is too small for the returned data.";
+                    break;
+
+                case SCARD_E_UNKNOWN_READER:
+                    msg = "The specified reader name is not recognized.";
+                    break;
+
+                case SCARD_E_TIMEOUT:
+                    msg = "The user-specified timeout value has expired.";
+                    break;
+
+                case SCARD_E_SHARING_VIOLATION:
+                    msg = "The smart card cannot be accessed because of other connections outstanding.";
+                    break;
+
+                case SCARD_E_NO_SMARTCARD:
+                    msg = "The operation requires a Smart Card, but no Smart Card is currently in the device.";
+                    break;
+
+                case SCARD_E_UNKNOWN_CARD:
+                    msg = "The specified smart card name is not recognized.";
+                    break;
+
+                case SCARD_E_CANT_DISPOSE:
+                    msg = "The system could not dispose of the media in the requested manner.";
+                    break;
+
+                case SCARD_E_PROTO_MISMATCH:
+                    msg = "The requested protocols are incompatible with the protocol currently in use with the smart card.";
+                    break;
+
+                case SCARD_E_NOT_READY:
+                    msg = "The reader or smart card is not ready to accept commands.";
+                    break;
+
+                case SCARD_E_INVALID_VALUE:
+                    msg = "One or more of the supplied parameters values could not be properly interpreted.";
+                    break;
+
+                case SCARD_E_SYSTEM_CANCELLED:
+                    msg = "The action was cancelled by the system, presumably to log off or shut down.";
+                    break;
+
+                case SCARD_F_COMM_ERROR:
+                    msg = "An internal communications error has been detected.";
+                    break;
+
+                case SCARD_F_UNKNOWN_ERROR:
+                    msg = "An internal error has been detected, but the source is unknown.";
+                    break;
+
+                case SCARD_E_INVALID_ATR:
+                    msg = "An ATR obtained from the registry is not a valid ATR string.";
+                    break;
+
+                case SCARD_E_NOT_TRANSACTED:
+                    msg = "An attempt was made to end a non-existent transaction.";
+                    break;
+
+                case SCARD_E_READER_UNAVAILABLE:
+                    msg = "The specified reader is not currently available for use.";
+                    break;
+
+                case SCARD_P_SHUTDOWN:
+                    msg = "The operation has been aborted to allow the server application to exit.";
+                    break;
+
+                case SCARD_E_PCI_TOO_SMALL:
+                    msg = "The PCI Receive buffer was too small.";
+                    break;
+
+                case SCARD_E_READER_UNSUPPORTED:
+                    msg = "The reader driver does not meet minimal requirements for support.";
+                    break;
+
+                case SCARD_E_DUPLICATE_READER:
+                    msg = "The reader driver did not produce a unique reader name.";
+                    break;
+
+                case SCARD_E_CARD_UNSUPPORTED:
+                    msg = "The smart card does not meet minimal requirements for support.";
+                    break;
+
+                case SCARD_E_NO_SERVICE:
+                    msg = "The Smart card resource manager is not running.";
+                    break;
+
+                case SCARD_E_SERVICE_STOPPED:
+                    msg = "The Smart card resource manager has shut down.";
+                    break;
+
+                case SCARD_E_UNEXPECTED:
+                    msg = "An unexpected card error has occurred.";
+                    break;
+
+                case SCARD_E_ICC_INSTALLATION:
+                    msg = "No Primary Provider can be found for the smart card.";
+                    break;
+
+                case SCARD_E_ICC_CREATEORDER:
+                    msg = "The requested order of object creation is not supported.";
+                    break;
+
+                case SCARD_E_UNSUPPORTED_FEATURE:
+                    msg = "This smart card does not support the requested feature.";
+                    break;
+
+                case SCARD_E_DIR_NOT_FOUND:
+                    msg = "The identified directory does not exist in the smart card.";
+                    break;
+
+                case SCARD_E_FILE_NOT_FOUND:
+                    msg = "The identified file does not exist in the smart card.";
+                    break;
+
+                case SCARD_E_NO_DIR:
+                    msg = "The supplied path does not represent a smart card directory.";
+                    break;
+
+                case SCARD_E_NO_FILE:
+                    msg = "The supplied path does not represent a smart card file.";
+                    break;
+
+                case SCARD_E_NO_ACCESS:
+                    msg = "Access is denied to this file.";
+                    break;
+
+                case SCARD_E_WRITE_TOO_MANY:
+                    msg = "The smartcard does not have enough memory to store the information.";
+                    break;
+
+                case SCARD_E_BAD_SEEK:
+                    msg = "There was an error trying to set the smart card file object pointer.";
+                    break;
+
+                case SCARD_E_INVALID_CHV:
+                    msg = "The supplied PIN is incorrect.";
+                    break;
+
+                case SCARD_E_UNKNOWN_RES_MNG:
+                    msg = "An unrecognized error code was returned from a layered component.";
+                    break;
+
+                case SCARD_E_NO_SUCH_CERTIFICATE:
+                    msg = "The requested certificate does not exist.";
+                    break;
+
+                case SCARD_E_CERTIFICATE_UNAVAILABLE:
+                    msg = "The requested certificate could not be obtained.";
+                    break;
+
+                case SCARD_E_NO_READERS_AVAILABLE:
+                    msg = "Cannot find a smart card reader.";
+                    break;
+
+                case SCARD_E_COMM_DATA_LOST:
+                    msg = "A communications error with the smart card has been detected.  Retry the operation.";
+                    break;
+
+                case SCARD_E_NO_KEY_CONTAINER:
+                    msg = "The requested key container does not exist on the smart card.";
+                    break;
+
+                case SCARD_E_SERVER_TOO_BUSY:
+                    msg = "The Smart card resource manager is too busy to complete this operation.";
+                    break;
+
+                case SCARD_W_UNSUPPORTED_CARD:
+                    msg = "The reader cannot communicate with the smart card, due to ATR configuration conflicts.";
+                    break;
+
+                case SCARD_W_UNRESPONSIVE_CARD:
+                    msg = "The smart card is not responding to a reset.";
+                    break;
+
+                case SCARD_W_UNPOWERED_CARD:
+                    msg = "Power has been removed from the smart card, so that further communication is not possible.";
+                    break;
+
+                case SCARD_W_RESET_CARD:
+                    msg = "The smart card has been reset, so any shared state information is invalid.";
+                    break;
+
+                case SCARD_W_REMOVED_CARD:
+                    msg = "The smart card has been removed, so that further communication is not possible.";
+                    break;
+
+                case SCARD_W_SECURITY_VIOLATION:
+                    msg = "Access was denied because of a security violation.";
+                    break;
+
+                case SCARD_W_WRONG_CHV:
+                    msg = "The card cannot be accessed because the wrong PIN was presented.";
+                    break;
+
+                case SCARD_W_CHV_BLOCKED:
+                    msg = "The card cannot be accessed because the maximum number of PIN entry attempts has been reached.";
+                    break;
+
+                case SCARD_W_EOF:
+                    msg = "The end of the smart card file has been reached.";
+                    break;
+
+                case SCARD_W_CANCELLED_BY_USER:
+                    msg = "The action was cancelled by the user.";
+                    break;
+
+                case SCARD_W_CARD_NOT_AUTHENTICATED:
+                    msg = "No PIN was presented to the smart card.";
+                    break;
+                
+                default:
+                    msg = "Error code: " + errorCode;
+                    break;
+            }
+
+            return msg;
+        }
+
+        /// <summary>
+        /// SCardException constructor
+        /// </summary>
+        /// <param name="errorCode">Specified the Smart Card error code</param>
+        public SCardException(long errorCode) : base(getSCardMessageException(errorCode))
+        {
+            m_errCode = errorCode;
+        }
+
+        /// <summary>
+        /// SCardException constructor
+        /// </summary>
+        /// <param name="msg">Specified base error message.</param>
+        /// <param name="errorCode">Specified the Smart Card error code</param>
+        public SCardException(string msg, long errorCode)
+            : base(msg)
+        {
+            m_errCode = errorCode;
+            if( errorCode >= SCARD_F_INTERNAL_ERROR && errorCode <= SCARD_W_CARD_NOT_AUTHENTICATED )
+                m_errMsg = getSCardMessageException(errorCode);
+        }
+
+        /// <summary>
+        /// Override base definition to return base message plus Smart Card error message if available. 
+        /// </summary>
+        public override string Message
+        {
+            get
+            {
+                if (m_errMsg != "")
+                    return base.Message + "\r\n" + m_errMsg;
+                
+                return base.Message;
+            }
+        }
+    }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Ôªøusing System;
+
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+
+namespace ElySCardDotNet
+{
+    public class SCardManager : ISCardManager
+    {
+        private UInt32 m_hContext = 0;
+        private int m_nLastError = 0;
+
+        /// <summary>
+        /// SCardManager constructor.
+        /// </summary>
+        public SCardManager()
+        {
+        }
+
+        /// <summary>
+        /// Wraps the PCSC function SCardEstablishContext. This function establishes the resource manager context (the scope) within which database operations are performed.
+        /// </summary>
+        /// <param name="Scope">Specifies the scope of the resource manager context.</param>
+        public void EstablishContext(SCOPE dwScope)
+        {
+            IntPtr hContext = IntPtr.Zero;
+
+            try
+            {
+                hContext = Marshal.AllocHGlobal(Marshal.SizeOf(m_hContext));
+
+                m_nLastError = WinSCardNative._SCardEstablishContext((uint)dwScope, IntPtr.Zero, IntPtr.Zero, hContext);
+                if (m_nLastError != 0)
+                {
+                    string msg = "SCardEstablishContext error: " + m_nLastError;
+
+                    throw new SCardException(msg, m_nLastError);
+                }
+
+                m_hContext = (uint)Marshal.ReadInt32(hContext);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(hContext);
+            }
+        }
+
+        /// <summary>
+        /// Wraps the PCSC function SCardReleaseContext. This function closes an established resource manager context, freeing any resources allocated under that context.
+        /// </summary>        
+        public void ReleaseContext()
+        {
+            if (m_hContext != 0)
+            {
+                m_nLastError = WinSCardNative._SCardReleaseContext(m_hContext);
+                if (m_nLastError != 0)
+                {
+                    string msg = "SCardReleaseContext error: " + m_nLastError;
+
+                    throw new SCardException(msg, m_nLastError);
+                }
+
+                m_hContext = 0;
+            }
+        }
+
+        /// <summary>
+        /// Wraps the PCSC funciton SCardListReaders. This function provides the list of readers.
+        /// </summary>
+        /// <returns>A string array that list the card readers.</returns>
+        public string[] ListReaders()
+        {
+            string[] sListReaders = null;
+            string sReaders;
+            UInt32 pchReaders = 0;
+            IntPtr pszListReaders = IntPtr.Zero;
+
+            //pchReaders = SCARD_AUTOALLOCATE;
+            //m_nLastError = WinSCardNative.SCardListReaders(m_hContext, IntPtr.Zero, out baListReaders, ref pchReaders);
+
+            m_nLastError = WinSCardNative._SCardListReaders(m_hContext, IntPtr.Zero, pszListReaders, ref pchReaders);
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardListReaders error: " + m_nLastError;
+
+                throw new SCardException(msg, m_nLastError);
+            }
+            else
+            {
+                try
+                {
+                    pszListReaders = Marshal.AllocHGlobal((int)(pchReaders * 2));
+                    m_nLastError = WinSCardNative._SCardListReaders(m_hContext, IntPtr.Zero, pszListReaders, ref pchReaders);
+                    if (m_nLastError == 0)
+                    {
+                        // Copy the string to managed memory and
+                        // Remove the two '\0' last characters indicating the end of string
+                        sReaders = Marshal.PtrToStringAnsi(pszListReaders, (int)(pchReaders - 2));
+
+                        // Next we split up the null delimited strings into a string array
+                        char[] delimiter = new char[1];
+                        delimiter[0] = Convert.ToChar(0);
+
+                        sListReaders = sReaders.Split(delimiter);
+                        Array.Sort(sListReaders);
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+                finally
+                {
+                    Marshal.FreeHGlobal(pszListReaders);
+                }
+            }
+
+            return sListReaders;
+        }
+
+
+        /// <summary>
+        /// This function return a SCardConnection object associated with the specified reader.
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns>Specifies the card reader containing the smart card to use.</returns>
+        public SCardConnection CreateConnection(string reader)
+        {
+            return new SCardConnection(m_hContext, reader);
+        }
+
+
+        /// <summary>
+        /// Wraps the PCSC function SCardCancel. This function terminates all outstanding actions within a specific resource manager context.
+        /// </summary>        
+        public void Cancel()
+        {
+            m_nLastError = WinSCardNative._SCardCancel(m_hContext);
+            if (m_nLastError != 0)
+            {
+                string msg = "SCardCancel error: " + m_nLastError;
+
+                throw new SCardException(msg, m_nLastError);
+            }
+        }
+
+        /// <summary>
+        /// Wraps the PCSC function SCardGetStatusChange. This function blocks execution until the current availability of the cards in a specific set of readers changes.
+        /// </summary>
+        /// <param name="dwTimeout">Specifies the maximum amount of time, in milliseconds, to wait for an action. A value of zero causes the function to return immediately. A value of INFINITE causes this function never to time out.</param>
+        /// <param name="rgReaderStates">Supplies an array of SCARD_READERSTATE structures that specify the readers to watch, and receives the result.</param>
+        /// <returns>If the timeout has expired the function returns the value SCARD_E_TIMEOUT.</returns>
+        public long GetStatusChange(int dwTimeout, SCARD_READERSTATE[] readersState)
+        {
+            IntPtr rgReaderState = IntPtr.Zero;
+
+            try
+            {
+                uint cReaders = (uint)readersState.Length;
+
+                int size = Marshal.SizeOf(readersState[0]);
+                rgReaderState = Marshal.AllocHGlobal(readersState.Length * size);
+                int pos = (int)rgReaderState;
+                for (int i = 0; i < cReaders; i++)
+                {
+                    Marshal.StructureToPtr(readersState[i], (IntPtr)pos, false);
+                    pos += size;
+                }
+
+                m_nLastError = WinSCardNative._SCardGetStatusChange(m_hContext, unchecked((uint)dwTimeout),
+                    rgReaderState, cReaders);
+                if (m_nLastError == SCardException.SCARD_E_TIMEOUT)
+                {
+                    return m_nLastError;
+                }
+                else if (m_nLastError != 0 && m_nLastError != SCardException.SCARD_E_NO_READERS_AVAILABLE)
+                {
+                    string msg = "SCardGetStatusChange error: " + m_nLastError;
+
+                    throw new SCardException(msg, m_nLastError);
+                }
+
+                pos = (int)rgReaderState;
+                for (int i = 0; i < cReaders; i++)
+                {
+                    readersState[i] = (SCARD_READERSTATE)Marshal.PtrToStructure((IntPtr)pos,
+                        typeof(SCARD_READERSTATE));
+                    pos += size;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(rgReaderState);
+            }
+
+            return 0;
+        }
+    }
+}
+                                                                                                                                                                                                                                                                         âPNG
+
+   IHDR   h      ;àÿ  -IDATxÌ]{XåyˇæsZ% îNF:®¥FÂ–™÷Ñbêù›Ë@;~”é√"DHë⁄Zïñm_åÈË4ƒŸ⁄!Î-á2´U´Ce[ä"ßö_ÒÃ3ÛLSÏıæÔæˆ∫|Æ´´y>ßÔ˝πÔÔ·_ôLÜˆ˛Z∑ºﬂ¶ajÎÒÆπLïoÒ˙˛}´.ÕÎ2ﬁ„˚$ZçˆÂ);*.d• ~€Ïﬂ≥wàó∑'à‚0≥À‚˛@·˚!ZZe ˇ¡ﬁÕ∫w”¯œ‘⁄âù˘?ÿO = \ L‚[Úg≤dxr0 –	óÄ§Rrj∑JûÄë*Ì.WJN5®‰…q»M™‘[mù∫ﬁïíSb58ôƒºR B5Ω•ïíSRus[2<Ÿƒ%∑òòï≤V'òÍ+%ß$fvò ÿƒ∫R ª´KÛ$ù	°•Cù4„+x∫ò£ΩsQŸ}f∂¿[≤vÙZ
+ÄÁ6c}îΩ!,Lt ◊Ô<¬≈´µ∞dxÜ H)/ŒŸfÌË•ß•C´1∂v£Ù∫[~ñœ—Â≈9%DœDKgûrN}M9˙Y´´3*/ŒiË¨∑%√ìU^ú#∂vÙr'p≤=]Ã—_ß7ÆﬂyÑÏS∏™ΩÎk a…¥-/Œ!E≤vÙ‚ ‡902úÌ¡…ñFÊü*∏≈,˝≠ñO!1k>Q””≥¶∞dx¶X:˚º=G√¬D◊Ô<¬˛√'∏fvR™KÛÇUZjbÛiË˛§`Ëı˝àt∫9c˘úëx’⁄™V†W≠≠∞sûabÛiËw1Û1xê%ÓÊhåπﬁ∂∏9◊â>o’ÆhkGØ~•óNl∞sû"^¬ô¿dé2%swÖ¯®ïºW≠≠ãÏúßD∏zØ‡Ì
+W†Ü∆Áò8c>ÇÅÌ1îÙám∑BvÍÓ´÷÷8 ‹âﬁAàZÚ	˛TÖuór≠Ω™¥th9k¬÷RÍÂüSf€˛/dßñ∞âæ‰ú1kÁbÑçA.‹ç∏@¯ì+;:j€⁄—À´Ù“â| #ç≠›p4iÆ‚®]ºç‚ﬂ∆ÛV~Èÿ«åÖxfv$’•y|S[èˆ;BOKáVì≈ﬂ÷Å‡ŒÃa 4x0∂œ:¬ﬂDNù54>«gúıxp˜™o;Z:¥¨ú√…î∫Ä’«ÎôÔb€á™ˆ¸|—^Tä7=$4)L!‹/Âu¸í#)9/rq√%Óÿ≈Ô¨~aîÁé≈-‡∏poE†ÇîÆ,|gé•m	/9/äs√‚òÿ|öú±c	”/Âu®¸ ÎÄP\Öça¡¬íÛ¢ á1,¶•”¢√;ueÚy™KÛ\‰Ö∞¸√"7-K!3>ı2 ÀÀammÂ⁄»r7M.ê(~[2”›…Ñå]©®C<ø Ìªb9«[)v[~—,_∫@\|Ó8Àq‹¥{∑†–}Qﬁîugr7‡€»J]|⁄e§Ô⁄ê`Éñ≠ÊÁˇ§‡ô4s5‹+µ’“°ï©∆\ß·È„˚∂Ÿï˝x‡J,˚Ãud˘˘çês&@yéıIÖeDÖü;Á8nZ¡û={ òfÛQU|X†ﬁÿ⁄ù)ÿ∂ò"ﬁtÓV‹-œw–o

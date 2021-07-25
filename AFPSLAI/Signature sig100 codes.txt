@@ -1,0 +1,1468 @@
+
+#region " Imports "
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Imaging;
+using DCS2015.Class;
+
+#endregion
+
+namespace DCS2015.Forms.UserForms
+{
+    public partial class ucSignatureCapture_EvolisSig100 : UserControl
+    {
+
+        public ucSignatureCapture_EvolisSig100()
+        {
+            InitializeComponent();            
+        }
+
+        public ucSignatureCapture_EvolisSig100(Action MainAction)
+        {
+            InitializeComponent();
+            _action = MainAction;
+        }
+
+        public Action _action;
+
+        private void ucSignatureCapture_EvolisSig100_Load(object sender, EventArgs e)
+        {
+            InitializeSig100();
+
+            chkOverrideSignature.Checked = DCS_MemberInfo.Data.SignatureOverride;
+            if(File.Exists(DCS_MemberInfo.Data.SignatureFile)){ btnDone.Visible=false; }
+
+            BindSignatures();
+        }
+
+        private void ucSignatureCapture_Resize(object sender, EventArgs e)
+        {
+            pnlMain.Left = (this.ClientSize.Width - pnlMain.Width) / 2;
+            pnlMain.Top = (this.ClientSize.Height - pnlMain.Height) / 2;
+        }
+
+        #region " Controls Event "
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {            
+            if (System.IO.File.Exists(DCS_MemberInfo.Data.SignatureFile))
+            {
+                if (Utilities.ShowQuestionMessage("Recapture signature?") == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            btnDone.Visible = true;
+
+            Class.Utilities.SignatureCapturing_ErrorMessage = "";
+            
+            //InitializeSignature();
+            DCS_MemberInfo.Data.ResetSignature();
+            if(_action!=null)_action.Invoke();
+        }
+
+        #endregion    
+         
+
+        int timerCount = 0;
+        private void Timer1_Tick(System.Object sender, System.EventArgs e)
+        {
+            timerCount += 1;
+            //if (timerCount == 3)
+            if (timerCount == 5)
+            {
+                Timer1.Stop();
+                timerCount = 0;
+                //SigPlusNET1.SetJustifyMode(5);
+                //SaveSignature();
+            }
+        }
+
+        private void DisplayMsg(string strMsg)
+        {
+            Class.Utilities.SignatureCapturing_ErrorMessage = strMsg;
+            txtMsg.Text = strMsg;
+            txtMsg.ForeColor = Color.Orange;
+        }
+
+        //public void SaveSignature()
+        //{
+        //    try
+        //    {
+        //        Bitmap myimage = default(Bitmap);
+        //        List<Class.ListofDimensions> ld = new List<Class.ListofDimensions>();
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 500,
+        //            NHeigth = 167
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 490,
+        //            NHeigth = 163
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 480,
+        //            NHeigth = 160
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 470,
+        //            NHeigth = 157
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 460,
+        //            NHeigth = 153
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 450,
+        //            NHeigth = 150
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 430,
+        //            NHeigth = 143
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 400,
+        //            NHeigth = 133
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 380,
+        //            NHeigth = 126
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 350,
+        //            NHeigth = 116
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 300,
+        //            NHeigth = 100
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 280,
+        //            NHeigth = 93
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 250,
+        //            NHeigth = 83
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 240,
+        //            NHeigth = 80
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 230,
+        //            NHeigth = 77
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 220,
+        //            NHeigth = 73
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 210,
+        //            NHeigth = 70
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 200,
+        //            NHeigth = 67
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 190,
+        //            NHeigth = 64
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 180,
+        //            NHeigth = 60
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 170,
+        //            NHeigth = 57
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 160,
+        //            NHeigth = 54
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 150,
+        //            NHeigth = 50
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 140,
+        //            NHeigth = 47
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 130,
+        //            NHeigth = 44
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 120,
+        //            NHeigth = 40
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 110,
+        //            NHeigth = 37
+        //        });
+        //        ld.Add(new Class.ListofDimensions
+        //        {
+        //            NWidth = 100,
+        //            NHeigth = 34
+        //        });
+
+        //        SigPlusNET1.SetImageXSize(450);
+        //        SigPlusNET1.SetImageYSize(150);                
+
+        //        DCS_MemberInfo.Data.SignatureFile = string.Format(@"{0}\{1}", Utilities.CAPTUREDDATA_RAW_REPOSITORY, Utilities.Signature_FileNameTIFF);
+
+        //        if(Properties.Settings.Default.SignatureOutputJPG)
+        //            SigPlusNET1.GetSigImage().Save(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", ".jpg"), System.Drawing.Imaging.ImageFormat.Jpeg);
+
+        //        if (Properties.Settings.Default.SignatureOutputBMP)
+        //            SigPlusNET1.GetSigImage().Save(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", ".bmp"), System.Drawing.Imaging.ImageFormat.Bmp);                
+
+        //        int FileSize = 0;
+        //        int indx = 0;
+
+        //        int NW = ld[indx].NWidth;
+        //        int NH = ld[indx].NHeigth;
+        //    again:
+
+        //        SigPlusNET1.SetImageXSize(NW);
+        //        SigPlusNET1.SetImageYSize(NH);
+        //        //SigPlusNET1.SetJustifyMode(0)
+
+        //        myimage = (Bitmap)SigPlusNET1.GetSigImage();
+        //        Bitmap bmp = myimage;
+        //        //ToBlackAndWhite(myimage)
+        //        System.Drawing.Imaging.Encoder myEncoder = System.Drawing.Imaging.Encoder.ColorDepth;
+        //        EncoderParameters parameters = new System.Drawing.Imaging.EncoderParameters(1);
+        //        ImageCodecInfo enc = GetEncoderInfo(System.Drawing.Imaging.ImageFormat.Tiff);
+        //        int im = (Int32)4L;
+        //        parameters.Param[0] = new EncoderParameter(myEncoder, im);
+        //        bmp.Save(DCS_MemberInfo.Data.SignatureFile, enc, parameters);
+
+        //        if (!IsFileAccepted(DCS_MemberInfo.Data.SignatureFile, ref FileSize))
+        //        {
+        //            if (FileSize > 1536)
+        //            {
+        //                indx += 1;
+        //                if (indx >= ld.Count)
+        //                {
+        //                    im = (Int32)1L;
+        //                    indx = 0;
+        //                }
+        //            }
+        //            else if (FileSize < 800)
+        //            {
+        //                if (indx == 0)
+        //                {
+        //                    indx = ld.Count - 1;
+        //                }
+        //                indx -= 1;
+        //            }
+        //            NW = ld[indx].NWidth;
+        //            NH = ld[indx].NHeigth;
+        //            goto again;
+        //        }
+        //        SigPlusNET1.SetTabletState(0);                
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DisplayMsg(ex.Message);
+        //    }              
+        //}
+
+        public bool IsFileAccepted(string strFile, ref int FileSize)
+        {            
+            FileInfo fi = new FileInfo(strFile);
+            if (fi.Exists)
+            {
+                if (fi.Length >= 800 && fi.Length <= 1536)
+                {
+                    FileSize = (int)fi.Length;
+                    return true;
+                }
+            }
+            FileSize = (int)fi.Length;
+            File.Delete(fi.FullName);
+            return false;
+        }
+
+        private static ImageCodecInfo GetEncoderInfo(ImageFormat format)
+        {
+            int j = 0;
+            ImageCodecInfo[] encoders = null;
+            encoders = ImageCodecInfo.GetImageEncoders();
+
+            j = 0;
+            while (j < encoders.Length)
+            {
+                if (encoders[j].FormatID == format.Guid)
+                {
+                    return encoders[j];
+                }
+                j += 1;
+            }
+            return null;
+
+        }        
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            //SigPlusNET1.SetJustifyMode(5);
+            //SaveSignature();
+            btnDone.Visible = false;
+            if(_action!=null)_action.Invoke();
+        }
+
+        private void chkOverrideSignature_CheckedChanged(object sender, EventArgs e)
+        {
+            DCS_MemberInfo.Data.SignatureOverride = chkOverrideSignature.Checked;
+        }
+
+        private string GetSigFile()
+        {
+            if (!File.Exists(DCS_MemberInfo.Data.SignatureFile))
+                return DCS_MemberInfo.Data.SignatureFile;
+            else if (!File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff")))
+                return DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff");
+            else if (!File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff")))
+                return DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff");
+            else return "";
+        }
+
+        #region " Evolis Sig100 "
+
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        public static extern bool DeleteObject(IntPtr hObject);
+
+        private enum ProcessState
+        {
+            Start = 0,
+            Terms,
+            Capturing,
+            Stopped
+        };
+
+        private SignPad[] _signPads = null;
+        private int _storeIdSigning = -1;
+        private int _storeIdOverlay = -1;
+        private int _buttonCancelId = -1;
+        private int _buttonRetryId = -1;
+        private int _buttonConfirmId = -1;
+        private const String _disclaimer = "With my signature, I certify that I'm excited about the signotec LCD Signature Pad and the signotec Pad Capture Control. This demo application has blown me away and I can't wait to integrate all these great features in my own application.";
+        private const string _csText = "What you see is what you sign!\nThe hash of this image has been computed inside of the pad and will be digitally signed after capturing. The display content cannot be changed until the signature has been confirmed.";
+        private ProcessState _processState = ProcessState.Start;
+        //private RSAOptions _rsaOptions = new RSAOptions();
+        //private ImageOptions _imageOptions = null;
+        //private SearchConfig _searchConfig = null;
+        //private PadServiceMessageBox _padServiceMessageBox = null;
+
+        private void InitializeSig100()
+        {
+            // scale fonts if screen resolution is not 96 dpi
+            Graphics graphics = this.CreateGraphics();
+            if (graphics.DpiX != 96F)
+                this.Font = new Font(this.Font.FontFamily, this.Font.Size * 96F / graphics.DpiX, this.Font.Style, this.Font.Unit, this.Font.GdiCharSet, this.Font.GdiVerticalFont);
+            graphics.Dispose();
+
+            // get list of installed fonts
+            //FontFamily[] fonts = FontFamily.Families;
+            //foreach (FontFamily font in fonts)
+            //    ComboBoxFontList.Items.Add(font.Name);
+
+            // set default indices for combo boxes
+            //ComboBoxFontList.SelectedIndex = ComboBoxFontList.Items.IndexOf("Arial");
+            //ComboBoxPenWidthOCX.SelectedIndex = 0;
+            //ComboBoxMirror.SelectedIndex = 4;
+            //ComboBoxTimeout.SelectedIndex = 0;
+            //ComboBoxDisplayPenWidth.SelectedIndex = 1;
+            //ComboBoxBacklight.SelectedIndex = 1;
+            //ComboBoxRotation.SelectedIndex = 0;
+            //ComboBoxTextAlign.SelectedIndex = 0;
+            //ComboBoxTextRect.SelectedIndex = 0;
+            //ComboBoxSource.SelectedIndex = 0;
+            //ComboBoxTarget.SelectedIndex = 0;
+            //ComboBoxImage.SelectedIndex = 0;
+            //ComboBoxPDF.SelectedIndex = 0;
+            //ComboBoxUnit.SelectedIndex = 0;
+            //ComboBoxSampleRate.SelectedIndex = 1;
+            //ComboBoxDisplayFileFormat.SelectedIndex = 0;
+            //ComboBoxFileFormat.SelectedIndex = 0;
+            //ComboBoxSignData.SelectedIndex = 0;
+            //ComboBoxHotspotType.SelectedIndex = 0;
+
+            // get control version
+            //GroupBoxMain.Text = String.Format("STPadCapt Version: {0}", axSTPadCapt1.ControlVersion);
+	
+            // get connected devices and open first one if any
+            GetDevices();
+            if (_signPads != null)
+                OpenDevice();            
+            if (!IsSignaturesComplete()) this.StartCancel();
+        }
+
+        private void StartCancel()
+        {
+            //axSTPadCapt1.Visible = true;
+            StartDefaultCapturing();
+
+            //if (ButtonStartCancel.Text.Equals("Start"))
+            //{
+            //    bool result = false;
+            //    if (ButtonSettings.Text.Equals("Advanced Settings"))
+            //    {
+            //        if (_rsaOptions.ComputeHash || _signPads[0].Alpha)
+            //            result = StartDefaultCapturing();
+            //        else
+            //            result = ShowDisclaimer();
+            //    }
+            //    else
+            //        result = StartAdvancedCapturing();
+            //    if (result)
+            //    {
+            //        //ButtonStartCancel.Text = "Cancel";
+            //        //ButtonConfirm.Enabled =  true;
+            //        //ButtonClearDisplay.Enabled = false;
+            //        //ButtonSettings.Enabled = false;
+            //        //ImageLcd.Visible = false;
+            //        axSTPadCapt1.Visible = true;
+            //        //GroupBoxSignature.Enabled = false;
+            //        //GroupBoxSignData.Enabled = false;
+            //        //ButtonRSA.Enabled = false;
+            //        //GroupBoxPadService.Enabled = false;
+            //    }
+            //}
+            //else
+            //    CancelProcess(false);
+        }
+
+        private void ButtonStop_Click()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            // stop capturing
+            int rc = axSTPadCapt1.SignatureStop();
+            this.Cursor = Cursors.Default;
+            if (rc < 0)
+            {
+                MessageBox.Show(new STPadException(rc, axSTPadCapt1).Message);
+                return;
+            }
+
+            //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+            //{
+            //    CheckBoxLedY.CheckState = CheckState.Checked;
+            //    CheckBoxLedG.CheckState = CheckState.Unchecked;
+            //}
+
+            // check if there are enough points for a valid signature
+            CheckForValidSignature(rc);
+
+            //ButtonStop.Enabled = false;
+            //ButtonRSA.Enabled = true;
+            //_processState = ProcessState.Stopped;
+        }
+
+        private int SetTarget(int target)
+        {
+            // return if pad is closed
+            //if ((ListOfDevices.SelectedIndex < 0) || !_signPads[ListOfDevices.SelectedIndex].Open)
+            //    return 0;
+
+            // set target
+            int id = axSTPadCapt1.DisplaySetTarget(target);
+
+            //// update ComboBoxTarget & ComboBoxSource: id holds the effective set target
+            //if (id > 1)
+            //{   // one of the stores
+            //    String strItem = String.Format("Permanent Store - ID {0}", id);
+            //    if (id != target)
+            //    {
+            //        ComboBoxSource.Items.Add(strItem);
+            //        ComboBoxTarget.SelectedIndex = ComboBoxTarget.Items.Add(strItem);
+            //    }
+            //}
+            //else if (id >= 0)
+            //    // one of the buffers
+            //    ComboBoxTarget.SelectedIndex = id;
+
+            //LabelTargetSize.Text = String.Format("Target Size: {0} x {1} px", axSTPadCapt1.DisplayWidth, axSTPadCapt1.DisplayHeight);
+            //if (axSTPadCapt1.DisplayTargetHeight - axSTPadCapt1.DisplayHeight > 0)
+            //{
+            //    TextBoxScrollX.Enabled = _signPads[ListOfDevices.SelectedIndex].SupportsHorizontalScrolling;
+            //    TextBoxScrollY.Enabled = _signPads[ListOfDevices.SelectedIndex].SupportsVerticalScrolling;
+            //    int xPos = 0;
+            //    int yPos = 0;
+            //    if (axSTPadCapt1.DisplayGetScrollPos(ref xPos, ref yPos) >= 0)
+            //    {
+            //        TextBoxScrollX.Text = String.Format("{0}", xPos);
+            //        TextBoxScrollY.Text = String.Format("{0}", yPos);
+            //    }
+            //}
+            //else
+            //{
+            //    TextBoxScrollY.Enabled = false;
+            //    TextBoxScrollX.Enabled = false;
+            //    TextBoxScrollX.Text = "0";
+            //    TextBoxScrollY.Text = "0";
+            //}
+
+            return id;
+        }
+
+        private bool StartDefaultCapturing()
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                // erase display
+                int rc = axSTPadCapt1.DisplayErase();
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // clear hot spots
+                rc = ClearHotSpots();
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                rc = SetTarget(1);
+
+                //if (_signPads[0].Sigma ||
+                //    (_signPads[0].Alpha && (_signPads[0].USB || _signPads[0].IP)))
+                //{   // "fast" pad or connection
+                //    if (_rsaOptions.ComputeHash)
+                //        // do all drawing operations in the virtual "Display Hash" buffer
+                //        rc = SetTarget(1000);
+                //    else
+                //        // do all drawing operations in the background buffer
+                //        rc = SetTarget(1);
+                //}
+                //else
+                //{   // "slow" pad or connection: do all drawing operations in the permanent memory
+                //    // make sure that always the second permanent memory is used
+                //    if (_storeIdOverlay < 0)
+                //    {
+                //        rc = SetTarget(_storeIdOverlay);
+                //        if (rc >= 0)
+                //            _storeIdOverlay = rc;
+                //    }
+                //    if (rc >= 0)
+                //    {
+                //        // set permanent memory as target
+                //        rc = SetTarget(_storeIdSigning);
+                //        if (rc >= 0)
+                //            _storeIdSigning = rc;
+                //    }
+                //}
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // draw the bitmaps
+                IntPtr hBitmap = IntPtr.Zero;
+                hBitmap = DCS2015.Properties.Resources.DefaultBitmap_sigma.GetHbitmap();
+
+                //if (_signPads[0].Sigma)
+                //    hBitmap = STPadCapt_Demo_App.Properties.Resources.DefaultBitmap_sigma.GetHbitmap();
+                //else if (_signPads[0].Omega)
+                //    hBitmap = STPadCapt_Demo_App.Properties.Resources.DefaultBitmap_omega.GetHbitmap();
+                //else if (_signPads[0].Alpha)
+                //    hBitmap = STPadCapt_Demo_App.Properties.Resources.DefaultBitmap_alpha.GetHbitmap();
+                rc = axSTPadCapt1.DisplaySetImage(0, 0, hBitmap.ToInt32());
+                DeleteObject(hBitmap);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                //if (_signPads[0].Omega ||
+                //    (_signPads[0].Alpha && !(_signPads[0].USB || _signPads[0].IP)))
+                //{
+                //    if (_rsaOptions.ComputeHash)
+                //        // do all drawing operations in the virtual "Display Hash" buffer
+                //        rc = SetTarget(1000);
+                //    else
+                //        // do all drawing operations in the background buffer
+                //        rc = SetTarget(1);
+                //    if (rc < 0)
+                //        throw new STPadException(rc, axSTPadCapt1);
+
+                //    // draw stored image
+                //    rc = axSTPadCapt1.DisplaySetImageFromStore((short)_storeIdSigning);
+                //    if (rc < 0)
+                //        throw new STPadException(rc, axSTPadCapt1);
+                //}
+
+                //if (_signPads[0].Alpha)
+                //{
+                //    // draw disclaimer
+                //    rc = axSTPadCapt1.DisplaySetTextInRect(50, 250, (short)(axSTPadCapt1.DisplayWidth - 100), 300, 0, _disclaimer);
+                //    throw new STPadException(rc, axSTPadCapt1);
+                //}
+
+                short x = 0;
+                short y = 0;
+                short width = 0;
+                short height = 0;
+                //if (_rsaOptions.ComputeHash)
+                //{
+                //    // draw explanation
+                //    x = (short)(_signPads[ListOfDevices.SelectedIndex].Sigma ? 13 : 50);
+                //    y = (short)(_signPads[ListOfDevices.SelectedIndex].Sigma ? 45 : (_signPads[ListOfDevices.SelectedIndex].Omega ? 160 : 250));
+                //    width = (short)(axSTPadCapt1.DisplayWidth - (_signPads[ListOfDevices.SelectedIndex].Sigma ? 20 : 100));
+                //    height = (short)(_signPads[ListOfDevices.SelectedIndex].Sigma ? 65 : (_signPads[ListOfDevices.SelectedIndex].Omega ? 150 : 300));
+                //    rc = axSTPadCapt1.DisplaySetTextInRect(x, y, width, height, 0, _csText);
+                //    if (rc < 0)
+                //        throw new STPadException(rc, axSTPadCapt1);
+
+                //    // draw timestamp
+                //    y = (short)(axSTPadCapt1.DisplayHeight - (_signPads[ListOfDevices.SelectedIndex].Sigma ? 20 : 90));
+                //    rc = axSTPadCapt1.DisplaySetText(x, y, 0, DateTime.Now.ToLocalTime().ToString());
+                //    if (rc < 0)
+                //        throw new STPadException(rc, axSTPadCapt1);
+                //}
+
+                // do all drawing operations on the LCD directly
+                rc = SetTarget(0);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                rc = axSTPadCapt1.DisplaySetImageFromStore(1);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                //if (_rsaOptions.ComputeHash)
+                //{   // let pad compute hash 1 of display content
+                //    if (!_rsaOptions.ComputeDisplayHash(1000))
+                //        return false;
+                //}
+                //else
+                //{   // draw buffered image
+                //    rc = axSTPadCapt1.DisplaySetImageFromStore(1);
+                //    if (rc < 0)
+                //        throw new STPadException(rc, axSTPadCapt1);
+
+                //    if (_rsaOptions.SignAfterCapture)
+                //    {   // set hash 1
+                //        if (!_rsaOptions.SetHash1())
+                //            return false;
+                //    }
+                //}
+
+                // set default signature window
+                x = (short)(_signPads[0].Alpha ? 90 : 0);
+                y = (short)(_signPads[0].Sigma ? 50 : (_signPads[0].Omega ? 100 : 600));
+                width = (short)(_signPads[0].Alpha ? 590 : 0);
+                height = (short)(_signPads[0].Alpha ? 370 : 0);
+                rc = axSTPadCapt1.SensorSetSignRect(x, y, width, height);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // add default hotspots
+                x = (short)(_signPads[0].Sigma ? 12 : (_signPads[0].Omega ? 24 : 30));
+                y = (short)(_signPads[0].Sigma ? 9 : (_signPads[0].Omega ? 18 : 30));
+                width = (short)(_signPads[0].Sigma ? 85 : (_signPads[0].Omega ? 170 : 80));
+                height = (short)(_signPads[0].Sigma ? 33 : (_signPads[0].Omega ? 66 : 80));
+                rc = axSTPadCapt1.SensorAddHotSpot(x, y, width, height);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+                _buttonCancelId = rc;
+                x = (short)(axSTPadCapt1.DisplayWidth - (_signPads[0].Sigma ? 203 : (_signPads[0].Omega ? 406 : 424)));
+                rc = axSTPadCapt1.SensorAddHotSpot(x, y, width, height);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+                _buttonRetryId = rc;
+                x = (short)(axSTPadCapt1.DisplayWidth - (_signPads[0].Sigma ? 98 : (_signPads[0].Omega ? 196 : 110)));
+                rc = axSTPadCapt1.SensorAddHotSpot(x, y, width, height);
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+                _buttonConfirmId = rc;
+
+                // start capturing
+                rc = axSTPadCapt1.SignatureStart();
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                //_rsaOptions.SignData = null;
+                //ButtonRetry.Enabled = true;
+                //ButtonStop.Enabled = true;
+                //ImageLcd.Visible = false;
+                //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+                //{
+                //    CheckBoxLedY.CheckState = CheckState.Unchecked;
+                //    CheckBoxLedG.CheckState = CheckState.Checked;
+                //}
+                _processState = ProcessState.Capturing;
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+                return false;
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+            return true;
+        }
+
+        private void GetDevices()
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                // get number of connected devices
+                int deviceCount = axSTPadCapt1.DeviceGetCount();
+                if (deviceCount < 0)
+                    throw new STPadException(deviceCount, axSTPadCapt1);
+
+                // erase all entries
+                //ListOfDevices.Items.Clear();
+
+                // build list
+                if (deviceCount <= 0)
+                {   // no devices detected
+                    _signPads = null;
+                    //ListOfDevices.Items.Add("No Devices");
+                    //ListOfDevices.Items.Add("detected");
+                    //ListOfDevices.Enabled = false;
+                    //ButtonOpenClose.Text = "Open";
+                    //ButtonOpenClose.Enabled = false;
+                    //ButtonClearDisplay.Enabled = false;
+                    //ButtonStartCancel.Enabled = false;
+                    //ButtonRetry.Enabled = false;
+                    //ButtonStop.Enabled = false;
+                    //ButtonConfirm.Enabled = false;
+                    //ButtonSettings.Enabled = true;
+                    //ImagePad.Image = STPadCapt_Demo_App.Properties.Resources.Welcome;
+                    //ImagePad.Visible = true;
+                    //ImageLed.Visible = false;
+                    //ImageLcd.Visible = false;
+                    //LabelType.Text = "Type: -";
+                    //LabelPort.Text = "Port: -";
+                    //LabelFirmware.Text = "Firmware: -";
+                    //LabelSerial.Text = "Serial: -";
+                    //LabelDisplay.Text = "Display: -";
+                }
+                else
+                {   // build device list
+                    _signPads = new SignPad[deviceCount];
+                    for (int i = 0; i < deviceCount; i++)
+                    {
+                        _signPads[i] = new SignPad(axSTPadCapt1, i);
+                        //ListOfDevices.Items.Add(String.Format("Device {0}", i + 1));
+                    }
+                    //ListOfDevices.Enabled = true;
+
+                    // select first element of list
+                    //if (deviceCount > 0)
+                    //    ListOfDevices.SetSelected(0, true);
+                }
+                //GroupBoxSignature.Enabled = false;
+                //GroupBoxSignData.Enabled = false;
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void ConfirmCapturing()
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                // clear hot spots
+                int rc = ClearHotSpots();
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // confirm capturing
+                rc = axSTPadCapt1.SignatureConfirm();
+                if (rc < 0)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // check if there are enough points for a valid signature
+                CheckForValidSignature(rc);
+
+                //ButtonStartCancel.Text = "Start";
+                //ButtonRetry.Enabled = false;
+                //ButtonStop.Enabled = false;
+                //ButtonConfirm.Enabled = false;
+                //ButtonClearDisplay.Enabled = true;
+                //ButtonSettings.Enabled = true;
+                //GroupBoxSensor.Enabled = true;
+                //ButtonRSA.Enabled = true;
+                //GroupBoxPadService.Enabled = true;
+                //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+                //{
+                //    CheckBoxLedY.CheckState = CheckState.Checked;
+                //    CheckBoxLedG.CheckState = CheckState.Unchecked;
+                //}
+                _processState = ProcessState.Start;
+
+                SaveSignature();
+
+                BindSignatures();
+
+                   this.Cursor = Cursors.Default;
+                if (!IsSignaturesComplete()) this.StartDefaultCapturing();
+                else this.CancelProcess(true);
+
+                //// sign data and verify signature
+                //if (_rsaOptions.SignAfterCapture)
+                //    _rsaOptions.Sign();
+
+                    //// get & decrypt SignData
+                    //if (_rsaOptions.UseSignData)
+                    //    this.ShowSignData();
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void BindSignatures()
+        {
+            if(picSig1.BackgroundImage==null)
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile))
+                    picSig1.BackgroundImage = Bitmap.FromStream(new System.IO.MemoryStream(System.IO.File.ReadAllBytes(DCS_MemberInfo.Data.SignatureFile)));
+
+            if (picSig2.BackgroundImage == null)
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff","2.tiff")))
+                    picSig2.BackgroundImage = Bitmap.FromStream(new System.IO.MemoryStream(System.IO.File.ReadAllBytes(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff"))));
+
+            if (picSig3.BackgroundImage == null)
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff")))
+                    picSig3.BackgroundImage = Bitmap.FromStream(new System.IO.MemoryStream(System.IO.File.ReadAllBytes(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff"))));
+        }
+
+        private bool IsSignaturesComplete()
+        {
+            short intCntr = 0;
+            if (File.Exists(DCS_MemberInfo.Data.SignatureFile)) intCntr+=1;            
+            if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff"))) intCntr += 1;
+            if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff"))) intCntr += 1;
+
+            if (intCntr == 3) return true; else return false;
+        }
+
+        private void SaveSignature()
+        {
+            // advanced options
+            //if (CheckBoxImageOptions.Checked)
+            //{
+            //    if (_imageOptions == null)
+            //        _imageOptions = new ImageOptions();
+            //    if (_imageOptions.ImageSizeOrg)
+            //    {
+            //        _imageOptions.ImageWidth = axSTPadCapt1.DisplayWidth;
+            //        _imageOptions.ImageHeight = axSTPadCapt1.DisplayHeight;
+            //    }
+            //    if (ComboBoxFileFormat.SelectedIndex == 2)
+            //    {
+            //        _imageOptions.Bitmap = 0;
+            //        _imageOptions.BitmapEnabled = false;
+            //    }
+            //    else
+            //        _imageOptions.BitmapEnabled = true;
+            //    _imageOptions.Base64Visible = false;
+            //    _imageOptions.ShowDialog();
+            //}
+
+            //DialogSave.FileName = "";
+            short fileType = 0;
+            //switch (ComboBoxFileFormat.SelectedIndex)
+            //{
+            //    case 0:
+            //        DialogSave.Filter = "TIFF (*.TIF)|*.tif";
+            //        break;
+            //    case 1:
+            //        DialogSave.Filter = "PNG (*.PNG)|*.png";
+            //        fileType = 1;
+            //        break;
+            //    case 2:
+            //        DialogSave.Filter = "PNG (*.PNG)|*.png";
+            //        fileType = 11;
+            //        break;
+            //    case 3:
+            //        DialogSave.Filter = "Bitmap (*.BMP)|*.bmp";
+            //        fileType = 2;
+            //        break;
+            //    case 4:
+            //        DialogSave.Filter = "JPEG (*.JPG)|*.jpg";
+            //        fileType = 3;
+            //        break;
+            //    case 5:
+            //        DialogSave.Filter = "GIF (*.GIF)|*.gif";
+            //        fileType = 4;
+            //        break;
+            //    default:
+            //        return;
+            //}
+
+            //DialogSave.ShowDialog();
+            //if (DialogSave.FileName.Equals(""))
+            //    return;
+
+            int options = 0;
+            short resolution = 300;
+            int width = 0;
+            int height = 0;
+            short penWidth = 3; //0;
+            Color penColor = Color.Black;
+
+            //if (CheckBoxImageOptions.Checked)
+            //{	// set options
+            //    if (_imageOptions.Timestamp == 1)
+            //        // timestamp relative to display size
+            //        options |= 0x01;
+            //    else if (_imageOptions.Timestamp == 2)
+            //        // timestamp relative to image size
+            //        options |= 0x101;
+            //    if (_imageOptions.Bitmap == 1)
+            //        // include signing bitmap
+            //        options |= 0x02;
+            //    else if (_imageOptions.Bitmap == 2)
+            //        // include signing bitmap & overlay
+            //        options |= 0x802;
+            //    else if (_imageOptions.Bitmap == 3)
+            //        // include current bitmap
+            //        options |= 0x2002;
+            //    else if (_imageOptions.Bitmap == 4)
+            //        // include current bitmap & overlay
+            //        options |= 0x2802;
+                //options |= (_imageOptions.EraseHotspots ? 4 : 0);
+                //options |= (_imageOptions.DontCrop ? 8 : 0);
+                //if (_imageOptions.HorizontalAlignment == 0)
+                //    // left alignment
+                //    options |= 0x10;
+                //else if (_imageOptions.HorizontalAlignment == 2)
+                //    // right alignment
+                //    options |= 0x20;
+                //if (_imageOptions.VerticalAlignment == 0)
+                //    // top alignment
+                //    options |= 0x40;
+                //else if (_imageOptions.VerticalAlignment == 2)
+                //    // right alignment
+                //    options |= 0x80;
+                //if (!_imageOptions.VariableSmoothing)
+                //    // no smoothing
+                //    options |= 0x200;
+                //else
+                    // smoothing
+                    options |= 0x400;
+
+                //// set resolution
+                //if (_imageOptions.ImageResolutionOrg)
+                //    resolution = 0;
+                //else
+                //    resolution = _imageOptions.ImageResolution;
+
+                //// set width & height
+                //if (_imageOptions.ImageSizeOrg)
+                //{
+                //    width = 0;
+                //    height = 0;
+                //}
+                //else
+                //{
+                //    width = _imageOptions.ImageWidth;
+                //    height = _imageOptions.ImageHeight;
+                //}
+
+                // set pen width
+                //penWidth = (short)_imageOptions.PenWidth;
+                //if (_imageOptions.VariableBrightness)
+                //    penWidth *= -1;
+                //if (_imageOptions.VariableWidth)
+                //    options |= 0x4000;
+
+                //// set pen color
+                //penColor = _imageOptions.PenColor;
+            //}
+
+            this.Cursor = Cursors.WaitCursor;
+
+            // save as file
+            int rc = axSTPadCapt1.SignatureSaveAsFileEx(GetSigFile(), resolution, width, height, fileType, penWidth, (uint)ColorTranslator.ToOle(penColor), options);
+            if (rc < 0)
+                MessageBox.Show(new STPadException(rc, axSTPadCapt1).Message);
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void CheckForValidSignature(long pointCount)
+        {
+            // get sample rate
+            float sampleRate = float.MaxValue;
+            int rc = axSTPadCapt1.SensorGetSampleRateMode();
+            switch (rc)
+            {
+                case 0:
+                    sampleRate = 125.0f;
+                    break;
+                case 1:
+                    sampleRate = 250.0f;
+                    break;
+                case 2:
+                    sampleRate = 500.0f;
+                    break;
+                case 3:
+                    sampleRate = 280.0f;
+                    break;
+                default:
+                    MessageBox.Show(new STPadException(rc, axSTPadCapt1).Message);
+                    break;
+            }
+
+            try
+            {
+                // check if there are enough points for a valid signature
+                if (((float)pointCount / sampleRate) > 0.2f)
+                {
+                    //LabelCapturedPoints.Text = String.Format("{0} points succesfully captured.", pointCount);
+
+                    short left = 0;
+                    short top = 0;
+                    short right = 0;
+                    short bottom = 0;
+                    rc = axSTPadCapt1.SignatureGetBounds(ref left, ref top, ref right, ref bottom, 0);
+                    if (rc < 0)
+                        throw new STPadException(rc, axSTPadCapt1);
+                    //LabelCapturedPoints.Text += String.Format("\nThe signature bounds are: {0}, {1}, {2}, {3}.", left, top, right, bottom);
+
+                }
+                //else
+                    //LabelCapturedPoints.Text = String.Format("This is not a valid signature!\n({0} points captured.)", pointCount);
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            //if (_signPads[0].Alpha)
+                //LabelCapturedPoints.Location = new Point(150, 570);
+            //else
+                //LabelCapturedPoints.Left = axSTPadCapt1.Left + axSTPadCapt1.Width / 2 - LabelCapturedPoints.Width / 2;
+            //GroupBoxSignature.Enabled = true;
+            //GroupBoxSignData.Enabled = true;
+            //LabelCapturedPoints.Visible = true;
+        }
+
+        private void OpenDevice()
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                // open device
+                try
+                {
+                    //_signPads[ListOfDevices.SelectedIndex].DeviceOpen();                    
+                    _signPads[0].DeviceOpen();
+
+                    _storeIdSigning = -1;
+                    _storeIdOverlay = -1;
+                    //ImageLcd.Visible = false;
+                    //axSTPadCapt1.Visible = true;
+                    //ButtonOpenClose.Text = String.Format("Close Device {0}", ListOfDevices.SelectedIndex + 1);
+                    //ButtonSearchConfig.Enabled = false;
+                    //ButtonDevCount.Enabled = false;
+                    //ButtonClearDisplay.Enabled = true;
+                    //ButtonStartCancel.Enabled = true;
+                    _buttonCancelId = -1;
+                    //ButtonRetry.Enabled = false;
+                    _buttonRetryId = -1;
+                    //ButtonStop.Enabled = false;
+                    //ButtonConfirm.Enabled = false;
+                    _buttonConfirmId = -1;
+                    //ListOfDevices.Enabled = false;
+                    //GroupBoxTimeouts.Enabled = true;
+                    //CheckBoxLedG.Enabled = true;
+                    //CheckBoxLedY.Enabled = true;
+                    //GroupBoxSensor.Enabled = true;
+                    //GroupBoxDisplayImage.Enabled = true;
+                    //GroupBoxDisplay.Enabled = true;
+                    //GroupBoxPadService.Enabled = true;
+                    //GroupBoxDrawing.Enabled = true;
+                    if (axSTPadCapt1.DisplayTargetHeight - axSTPadCapt1.DisplayHeight > 0)
+                    {
+                        //TextBoxScrollX.Enabled = _signPads[ListOfDevices.SelectedIndex].SupportsHorizontalScrolling;
+                        //TextBoxScrollY.Enabled = _signPads[ListOfDevices.SelectedIndex].SupportsVerticalScrolling;
+                        int currentXPos = 0;
+                        int currentYPos = 0;
+                        if (axSTPadCapt1.DisplayGetScrollPos(ref currentXPos, ref currentYPos) >= 0)
+                        {
+                            //TextBoxScrollX.Text = String.Format("{0}", currentXPos);
+                            //TextBoxScrollY.Text = String.Format("{0}", currentYPos);
+                        }
+                    }
+                    //_rsaOptions.InitControls(this);
+
+                    // set custom settings
+                    //axSTPadCapt1.ControlMirrorDisplay = (short)ComboBoxMirror.SelectedIndex;
+                    axSTPadCapt1.ControlMirrorDisplay = 4;
+                    SetFont();
+
+                    // set pen width and color
+                    if (!DisplayConfigPen())
+                    {
+                        CloseDevice();
+                        return;
+                    }
+
+                    // get sample rate
+                    int sampleRate = axSTPadCapt1.SensorGetSampleRateMode();
+                    if (sampleRate < 0)
+                        throw new STPadException(sampleRate, axSTPadCapt1);
+                    //ComboBoxSampleRate.SelectedIndex = sampleRate;
+
+                    // print display size
+                    //LabelDisplay.Text = String.Format("Display: {0} x {1} Pixel", axSTPadCapt1.DisplayWidth, axSTPadCapt1.DisplayHeight);
+                    //LabelTargetSize.Text = String.Format("Target Size: {0} x {1} px", axSTPadCapt1.DisplayTargetWidth, axSTPadCapt1.DisplayTargetHeight);
+
+                    //TextBoxSensorWidth.Text = String.Format("{0}", axSTPadCapt1.DisplayWidth - Int32.Parse(TextBoxSensorX.Text));
+                    //TextBoxSensorHeight.Text = String.Format("{0}", axSTPadCapt1.DisplayHeight - Int32.Parse(TextBoxSensorY.Text));
+                    //TextBoxDrawWidth.Text = String.Format("{0}", axSTPadCapt1.DisplayWidth - Int32.Parse(TextBoxDrawX.Text));
+                    //TextBoxDrawHeight.Text = String.Format("{0}", axSTPadCapt1.DisplayHeight - Int32.Parse(TextBoxDrawY.Text));
+                    //TextBoxSelectWidth.Text = String.Format("{0}", axSTPadCapt1.DisplayWidth - Int32.Parse(TextBoxSelectX.Text));
+                    //TextBoxSelectHeight.Text = String.Format("{0}", axSTPadCapt1.DisplayHeight - Int32.Parse(TextBoxSelectY.Text));
+                }
+                catch (STPadException exc)
+                {
+                    //MessageBox.Show(exc.Message);
+                    return;
+                }
+
+                
+            }
+            catch (STPadException exc)
+            {
+                CloseDevice();
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void CloseDevice()
+        {
+            this.Cursor = Cursors.WaitCursor;
+
+            // cancel signature process
+            CancelProcess(true);
+
+            // close device
+            try
+            {
+                //_signPads[ListOfDevices.SelectedIndex].DeviceClose();
+                _signPads[0].DeviceClose();
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            ResetAfterClose();
+
+            ClearHotSpots();
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private void ResetAfterClose()
+        {
+            //ButtonOpenClose.Text = String.Format("Open Device {0}", ListOfDevices.SelectedIndex + 1);
+            //ButtonSearchConfig.Enabled = true;
+            //ButtonDevCount.Enabled = true;
+            //ListOfDevices.Enabled = true;
+            //CheckBoxLedG.Enabled = false;
+            //CheckBoxLedY.Enabled = false;
+            //GroupBoxTimeouts.Enabled = false;
+            //GroupBoxSensor.Enabled = false;
+            //GroupBoxDisplay.Enabled = false;
+            //GroupBoxDisplayImage.Enabled = false;
+            //GroupBoxDrawing.Enabled = false;
+            //ButtonStartCancel.Text = "Start";
+            //ButtonStartCancel.Enabled = false;
+            //ButtonRetry.Enabled = false;
+            //ButtonStop.Enabled = false;
+            //ButtonConfirm.Enabled = false;
+            //ButtonClearDisplay.Enabled = false;
+            //_rsaOptions.InitControls(this);
+            //axSTPadCapt1.Visible = false;
+            //GroupBoxPadService.Enabled = false;
+            //if (_signPads[ListOfDevices.SelectedIndex].Omega)
+            //    ImageLcd.Image = STPadCapt_Demo_App.Properties.Resources.Logo_omega;
+            //else if (_signPads[ListOfDevices.SelectedIndex].Alpha)
+            //    ImageLcd.Image = STPadCapt_Demo_App.Properties.Resources.Logo_alpha;
+            //else
+            //    ImageLcd.Image = STPadCapt_Demo_App.Properties.Resources.Logo_sigma;
+            //ImageLcd.Visible = true;
+            //CheckBoxLedY.CheckState = CheckState.Checked;
+            //CheckBoxLedG.CheckState = CheckState.Unchecked;
+            //if (ComboBoxSource.SelectedIndex > 6)
+            //    ComboBoxSource.SelectedIndex = 0;
+            //while (ComboBoxSource.Items.Count > 7)
+            //    ComboBoxSource.Items.RemoveAt(ComboBoxSource.Items.Count - 1);
+            //if (ComboBoxTarget.SelectedIndex > 5)
+            //    ComboBoxTarget.SelectedIndex = 0;
+            //while (ComboBoxTarget.Items.Count > 6)
+            //    ComboBoxTarget.Items.RemoveAt(ComboBoxTarget.Items.Count - 1);
+            //LabelTargetSize.Text = "Target Size: -";
+            //TextBoxScrollX.Enabled = false;
+            //TextBoxScrollY.Enabled = false;
+        }
+
+        private bool DisplayConfigPen()
+        {
+            if (!_signPads[0].Open)
+                return false;
+
+            this.Cursor = Cursors.WaitCursor;
+            int rc = axSTPadCapt1.DisplayConfigPen((short)(2), (uint)ColorTranslator.ToOle(Color.Black));
+            this.Cursor = Cursors.Default;
+            if (rc < 0)
+            {
+                MessageBox.Show(new STPadException(rc, axSTPadCapt1).Message);
+                return false;
+            }
+            return true;
+        }
+
+        private void CancelProcess(bool silent)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            //LabelCapturedPoints.Text = "";
+            int rc = 0;
+
+            try
+            {
+                // cancel
+                if (axSTPadCapt1.SignatureState)
+                    // cancel capturing (this clears the LCD, too)
+                    rc = axSTPadCapt1.SignatureCancel();
+                else    // erase LCD
+                    rc = axSTPadCapt1.DisplayErase();
+                if ((rc < 0) && !silent)
+                    throw new STPadException(rc, axSTPadCapt1);
+
+                // clear all hot spots
+                rc = ClearHotSpots();
+                if ((rc < 0) && !silent)
+                    throw new STPadException(rc, axSTPadCapt1);
+            }
+            catch (STPadException exc)
+            {
+                MessageBox.Show(exc.Message);
+                return;
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+
+            //ButtonStartCancel.Text = "Start";
+            //ButtonStartCancel.Enabled = true;
+            //ButtonRetry.Enabled = false;
+            //ButtonStop.Enabled = false;
+            //ButtonConfirm.Enabled = false;
+            //ButtonClearDisplay.Enabled = true;
+            //ButtonSettings.Enabled = true;
+            //GroupBoxSensor.Enabled = true;
+            //ButtonRSA.Enabled = true;
+            //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+            //{
+            //    CheckBoxLedY.CheckState = CheckState.Checked;
+            //    CheckBoxLedG.CheckState = CheckState.Unchecked;
+            //}
+            _processState = ProcessState.Start;
+
+            this.Cursor = Cursors.Default;
+        }
+
+        private int ClearHotSpots()
+        {
+            int rc = axSTPadCapt1.SensorClearHotSpots();
+            if ((rc == 0) || (rc == -22))
+            {
+                _buttonCancelId = -1;
+                _buttonRetryId = -1;
+                _buttonConfirmId = -1;
+                // reset combo boxes
+                //ComboBoxHotspotId.Items.Clear();
+                //ComboBoxHotspotId.Enabled = false;
+                //ComboBoxHotspotMode.SelectedIndex = 1;
+                //ComboBoxHotspotMode.Enabled = false;
+            }
+            return rc;
+        }
+
+        private void SetFont()
+        {
+            
+        }
+
+        private void ButtonConfirm_Click()
+        {
+            if (_processState == ProcessState.Terms)
+                // accept disclaimer and start capturing
+                StartDefaultCapturing();
+            else
+                ConfirmCapturing();
+        }
+
+        private void ButtonRetry_Click()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            //LabelCapturedPoints.Visible = false;
+            //GroupBoxSignature.Enabled = false;
+            //GroupBoxSignData.Enabled = false;
+            //ButtonRSA.Enabled = false;
+            //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+            //{
+            //    CheckBoxLedY.CheckState = CheckState.Unchecked;
+            //    CheckBoxLedG.CheckState = CheckState.Checked;
+            //}
+            int rc = axSTPadCapt1.SignatureRetry();
+            //if (CheckBoxLedDef.CheckState == CheckState.Checked)
+            //{
+            //    CheckBoxLedY.CheckState = CheckState.Checked;
+            //    CheckBoxLedG.CheckState = CheckState.Unchecked;
+            //}
+            if (rc < 0)
+                MessageBox.Show(new STPadException(rc, axSTPadCapt1).Message);
+            //ButtonStop.Enabled = true;
+            this.Cursor = Cursors.Default;
+        }
+
+        #region "Events"
+
+        private void axSTPadCapt1_DeviceDisconnected(object sender, AxSTPadCaptLib._DSTPadCaptEvents_DeviceDisconnectedEvent e)
+        {
+            //if (e.nIndex == ListOfDevices.SelectedIndex)
+            //{
+            //    ResetAfterClose();
+
+            //    ButtonSettings.Enabled = true;
+            //    GroupBoxSignature.Enabled = false;
+            //    GroupBoxSignData.Enabled = false;
+            //    LabelCapturedPoints.Visible = false;
+            //    _processState = ProcessState.Start;
+            //    if (_padServiceMessageBox != null)
+            //        _padServiceMessageBox.Close();
+
+            //    ClearHotSpots();
+
+            //    GetDevices();
+            //}
+            //else
+            //{
+            //    ListOfDevices.Items.Insert(e.nIndex, "(Disconn.)");
+            //    ListOfDevices.Items.RemoveAt(e.nIndex + 1);
+            //}
+        }
+
+        private void axSTPadCapt1_SensorHotSpotPressed(object sender, AxSTPadCaptLib._DSTPadCaptEvents_SensorHotSpotPressedEvent e)
+        {
+            //if (ButtonSettings.Text.Equals("Advanced Settings"))
+            //{   // use default behaviour
+            if (e.nHotSpotId == _buttonCancelId)
+                this.StartCancel();
+            else if (e.nHotSpotId == _buttonRetryId)
+                ButtonRetry_Click();
+            else if (e.nHotSpotId == _buttonConfirmId)
+                ButtonConfirm_Click();
+            //}
+            //else // custom mode
+            //    MessageBox.Show(String.Format("Hot Spot {0} clicked.", e.nHotSpotId + 1));
+        }
+
+        private void axSTPadCapt1_SensorTimeoutOccured(object sender, AxSTPadCaptLib._DSTPadCaptEvents_SensorTimeoutOccuredEvent e)
+        {
+            //MessageBox.Show(String.Format("Timeout occured! {0} points have been captured.", e.nPointsCount));
+            //ButtonTimeoutStartStop.Text = "Start";
+        }
+
+        private void axSTPadCapt1_DisplayScrollPosChanged(object sender, AxSTPadCaptLib._DSTPadCaptEvents_DisplayScrollPosChangedEvent e)
+        {
+            //LabelScrollPos.Text = String.Format("Scroll Position: {0} / {1}", e.nXPos, e.nYPos);
+            //if (ComboBoxTarget.SelectedIndex == 0)
+            //{
+            //    TextBoxScrollX.Text = String.Format("{0}", e.nXPos);
+            //    TextBoxScrollY.Text = String.Format("{0}", e.nYPos);
+            //}
+        }
+
+        #endregion
+
+        #endregion
+
+        private void lbReset1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Utilities.ShowQuestionMessage("Are you sure?") == DialogResult.Yes)
+            {
+                picSig1.BackgroundImage = null;
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile)) File.Delete(DCS_MemberInfo.Data.SignatureFile);
+                if (!IsSignaturesComplete()) this.StartDefaultCapturing();
+            }
+
+        }
+
+        private void lbReset2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Utilities.ShowQuestionMessage("Are you sure?") == DialogResult.Yes)
+            {
+                picSig2.BackgroundImage = null;
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff"))) File.Delete(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "2.tiff"));
+                if (!IsSignaturesComplete()) this.StartDefaultCapturing();
+            }
+        }
+
+        private void lbReset3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Utilities.ShowQuestionMessage("Are you sure?") == DialogResult.Yes)
+            {
+                picSig3.BackgroundImage = null;
+                if (File.Exists(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff"))) File.Delete(DCS_MemberInfo.Data.SignatureFile.Replace(".tiff", "3.tiff"));
+                if (!IsSignaturesComplete()) this.StartDefaultCapturing();
+            }
+        }
+    }
+}
